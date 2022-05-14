@@ -15,11 +15,11 @@
 	}
 </script>
 
-<div class:dark={$darkModeActive}>
+<div class:dark={$darkModeActive} class="h-screen">
 	<div
-		class="w-screen h-screen bg-white dark:bg-gray-900 text-black dark:text-gray-300 duration-200"
+		class="bg-white dark:bg-gray-900 text-black dark:text-gray-300 duration-200 grid-container h-screen"
 	>
-		<span class="p-3 flex justify-between items-center">
+		<span class="p-3 flex justify-between items-center head">
 			<span class="text-3xl font-bold"> easy-rpc </span>
 			<span class="flex items-center space-x-4">
 				<a href="https://github.com/m1212e/easy-rpc"><GithubIcon /></a>
@@ -27,13 +27,52 @@
 				<Search />
 			</span>
 		</span>
-		<span class="flex w-screen">
-			<nav class="w-1/5">
-				<Navbar />
-			</nav>
-			<main class="w-4/5 pl-4">
-				<slot />
-			</main>
-		</span>
+		<nav class="nav">
+			<Navbar />
+		</nav>
+		<main class="page overflow-y-auto h-full">
+			<slot />
+		</main>
+		<section class="toc">
+			TABLE OF CONTENT TABLE OF CONTENT TABLE OF CONTENT TABLE OF CONTENT TABLE OF CONTENT
+		</section>
 	</div>
 </div>
+
+<style>
+	.grid-container {
+		display: grid;
+		grid-template-columns: 0.6fr 1.8fr 0.6fr;
+		grid-template-rows: 0.2fr 1.8fr;
+		grid-auto-columns: 1fr;
+		gap: 0em 1em;
+		grid-auto-flow: row;
+		grid-template-areas:
+			'head head head'
+			'nav page toc';
+	}
+
+	.head {
+		grid-area: head;
+	}
+
+	.nav {
+		grid-area: nav;
+	}
+
+	.page {
+		grid-area: page;
+	}
+
+	.toc {
+		grid-area: toc;
+	}
+
+	.overflow-y-auto::-webkit-scrollbar {
+		display: none;
+	}
+	.overflow-y-auto {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+</style>

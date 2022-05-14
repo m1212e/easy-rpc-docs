@@ -1,4 +1,23 @@
 /* Write your global styles here, in PostCSS syntax */
 @tailwind base;
+
+@layer base {
+	h1 {
+		@apply text-2xl font-bold;
+	}
+	h2 {
+		@apply text-xl font-bold;
+	}
+	h3 {
+		@apply text-lg font-bold;
+	}
+	ol {
+		@apply list-decimal pl-8;
+	}
+	ul {
+		@apply list-disc pl-8;
+	}
+}
+
 @tailwind components;
 @tailwind utilities;

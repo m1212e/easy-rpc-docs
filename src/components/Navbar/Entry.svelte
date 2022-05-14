@@ -6,15 +6,14 @@
 	export let title: string;
 	export let href: string;
 	let expanded = false;
-	let hasChildren = true;
+	let hasChildren = false;
+
+	if ($$props.$$slots?.default) {
+		hasChildren = true;
+	}
 
 	function toggle(e: Event) {
 		expanded = !expanded;
-	}
-
-	function disableChildren() {
-		hasChildren = false;
-		return '';
 	}
 </script>
 
@@ -37,6 +36,6 @@
 </span>
 {#if expanded && hasChildren}
 	<div transition:slide class="pl-5">
-		<slot>{disableChildren()}</slot>
+		<slot />
 	</div>
 {/if}
