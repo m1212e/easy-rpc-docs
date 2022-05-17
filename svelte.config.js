@@ -1,8 +1,9 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 import {mdsvex} from 'mdsvex'
-import rehypeAutolinkHeadings  from 'rehype-autolink-headings'
-import rehypeSlug  from 'rehype-slug'
+import {resolve} from 'path'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeSlug from 'rehype-slug'
 
 const dev = process.env.NODE_ENV === 'development';
 
@@ -16,7 +17,7 @@ const config = {
 		}),
 		mdsvex({
 			extensions: ['.md'],
-			layout: 'src/components/Page.svelte',
+			layout: 'src/template/components/Page.svelte',
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-ignore
 			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
@@ -24,6 +25,13 @@ const config = {
 	],
 
 	kit: {
+		vite: {
+			resolve: {
+				alias: {
+					$lib: resolve('./src/lib')
+				}
+			}
+		},
 		trailingSlash: "always",
 		adapter: adapter({
 			pages: "docs"

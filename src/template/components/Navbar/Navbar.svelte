@@ -3,10 +3,10 @@
 	import { NavEntry } from '../../interfaces/NavEntry';
 
 	const paths = [
-		...Object.keys(import.meta.glob('../../routes/**/*.svelte')),
-		...Object.keys(import.meta.glob('../../routes/**/*.md'))
+		...Object.keys(import.meta.glob('../../../routes/**/*.svelte')),
+		...Object.keys(import.meta.glob('../../../routes/**/*.md'))
 	]
-		.map((f) => f.replace('../../routes/', ''))
+		.map((f) => f.replace('../../../routes/', ''))
 		.map((f) => f.split('.').slice(-2)[0].split('/'))
 		.filter((f) => {
 			return !f.some((e) => e.startsWith('__' || e.includes('[')));
@@ -17,7 +17,7 @@
 	paths.forEach((p) => {
 		let previous: NavEntry = {
 			children: navEntries,
-			path: '/'
+			path: ''
 		} as NavEntry;
 		p.forEach((pathElement) => {
 			if (pathElement == 'index') {
@@ -37,7 +37,6 @@
 			previous = found;
 		});
 	});
-	
 </script>
 
 {#each navEntries as entry}

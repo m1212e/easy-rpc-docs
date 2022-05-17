@@ -21,11 +21,11 @@
 		: 'hover:bg-slate-200 dark:hover:bg-gray-800'}"
 >
 	{#if entry.children.length == 0}
-		<a href="{dev ? '' : '/easy-rpc-docs'}{entry.path}" class="w-full">
+		<a href="{dev ? '/' : '/easy-rpc-docs/'}{entry.path}" class="w-full">
 			{entry.name}
 		</a>
 	{:else if entry.indexPage}
-		<a href="{dev ? '' : '/easy-rpc-docs'}{entry.path}" class="w-full">
+		<a href="{dev ? '/' : '/easy-rpc-docs/'}{entry.path}" class="w-full">
 			{entry.name}
 		</a>
 	{:else}

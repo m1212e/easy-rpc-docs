@@ -1,13 +1,13 @@
 <script context="module">
 	import { dev } from '$app/env';
-	import Navbar from '../components/Navbar/Navbar.svelte';
-	import Search from '../components/Search/Search.svelte';
-	import DarkModeToggle from '../components/DarkModeToggle.svelte';
-	import { darkModeActive, setDarkMode } from '../stores/DarkMode';
+	import Navbar from '../template/components/Navbar/Navbar.svelte';
+	import Search from '../template/components/Search/Search.svelte';
+	import DarkModeToggle from '../template/components/DarkModeToggle.svelte';
+	import { darkModeActive, setDarkMode } from '../template/stores/DarkMode';
 	import { GithubIcon } from 'svelte-feather-icons';
 	import { browser } from '$app/env';
 	import '../app.css';
-	import TableOfContent from '../components/TableOfContent.svelte';
+	import TableOfContent from '../template/components/TableOfContent.svelte';
 
 	export async function load() {
 		if (browser) {
@@ -26,7 +26,8 @@
 			<span class="flex items-center space-x-4">
 				<a href="https://github.com/m1212e/easy-rpc"><GithubIcon /></a>
 				<DarkModeToggle />
-				<Search />
+				<!-- Search disabled until sveltekit provides a way to get component routes at compile time -->
+				<!-- <Search /> -->
 			</span>
 		</span>
 		<nav class="nav">

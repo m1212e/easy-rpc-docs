@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { onMount } from 'svelte';
 	import { setActiveEntry, setTOCFromPageContent } from '../stores/TableOfContent';
 
@@ -33,7 +33,7 @@
 	}
 </script>
 
-<div bind:this={child} class="text-justify overflow-y-auto h-full" on:scroll={handleScroll}>
+<div bind:this={child} class="text-justify overflow-y-auto h-full w-full" on:scroll={handleScroll}>
 	<slot />
 </div>
 
