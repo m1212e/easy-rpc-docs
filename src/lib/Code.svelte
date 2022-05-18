@@ -2,6 +2,7 @@
 	import { CheckIcon, CopyIcon, FileIcon } from 'svelte-feather-icons';
 	import { scale } from 'svelte/transition';
 	import { getHighlighter } from 'shiki';
+	import { onMount } from 'svelte';
 
 	export let filename = '';
 	let slot;
@@ -14,11 +15,16 @@
 		}, 800);
 	}
 
+	onMount(() => {
+		codeHighlighting()
+	})
+
 	async function codeHighlighting() {
 		const hightlighter = await getHighlighter({
 			theme: 'nord'
 		});
-		const output = hightlighter.codeToHtml(slot.textContent, {})
+		const output = hightlighter.codeToHtml(slot.textContent, {lang: "cd"})
+		slot.innerHTML = output;
 	}
 </script>
 
