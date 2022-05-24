@@ -4,6 +4,10 @@ import {mdsvex} from 'mdsvex'
 import {resolve} from 'path'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
+import {
+	createShikiHighlighter,
+	renderCodeToHTML,
+} from "shiki-twoslash";
 
 const dev = process.env.NODE_ENV === 'development';
 
@@ -16,12 +20,30 @@ const config = {
 			postcss: true
 		}),
 		mdsvex({
-			extensions: ['.md'],
+			extensions: [".svx", ".md"],
+			highlight: {
+				highlighter: async (code, lang, meta) => {
+					const highlighter = await createShikiHighlighter({
+						theme: 'one-dark-pro',
+					});
+
+
+					const html = renderCodeToHTML(
+						code,
+						lang,
+						meta || [],
+						{},
+						highlighter,
+						null
+					);
+
+					return `{@html \`${html}\` }`;
+				},
+			},
 			layout: 'src/template/components/Page.svelte',
-			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-			// @ts-ignore
 			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
-		})
+		}),
+
 	],
 
 	kit: {

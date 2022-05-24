@@ -42,3 +42,7 @@ h6 {
 .page > p > h1:first-of-type {
 	margin-top: 0px !important;
 }
+
+.language-id {
+	display: none;
+}

@@ -10,8 +10,14 @@ easy-rpc is a **r**emote **p**rocedure **c**all framework which focuses on ease 
 It aims to be an addition to or a replacement of other web communication protocols like REST or gRPC.
 
 ## What does it look like?
+
 A few defined easy-rpc endpoints might look like this:
 <Code filename="source.erpc">
-// A simple notification <br>
-server startTimer()<br>
+
+```ts
+const f = () => {
+	console.log('Some example');
+};
+```
+
 </Code>
