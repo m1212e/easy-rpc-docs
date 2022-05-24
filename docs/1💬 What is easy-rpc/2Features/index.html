@@ -15,7 +15,7 @@
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/pages/__layout.svelte-3704c034.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/chunks/TableOfContent-fa0561d2.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/chunks/index-79a199b2.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/pages/index.md-6c6d8220.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/pages/1💬 What is easy-rpc/2Features.md-b1f5229a.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/chunks/Page-256ef71b.js">
 		<link rel="stylesheet" href="/easy-rpc-docs/_app/assets/start-c446e5f0.css">
 		<link rel="stylesheet" href="/easy-rpc-docs/_app/assets/pages/__layout.svelte-7d3b7c3a.css">
@@ -36,11 +36,11 @@
 					error: null,
 					nodes: [
 						import("/easy-rpc-docs/_app/pages/__layout.svelte-3704c034.js"),
-						import("/easy-rpc-docs/_app/pages/index.md-6c6d8220.js")
+						import("/easy-rpc-docs/_app/pages/1💬 What is easy-rpc/2Features.md-b1f5229a.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "\u002F",
+						path: "\u002F1%F0%9F%92%AC%20What%20is%20easy-rpc\u002F2Features\u002F",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -61,14 +61,31 @@
 	<button class="p-2 rounded-md hover:bg-slate-300 dark:hover:bg-gray-700 duration-200"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down  duration-200"><polyline points="6 9 12 15 18 9"></polyline></svg></button></span>
 <div class="pl-5"><span class="flex justify-between items-center font-bold text-xl rounded-md duration-200 py-2 px-3 m-1 hover:bg-slate-200 dark:hover:bg-gray-800"><a href="/easy-rpc-docs/1💬 What is easy-rpc/1Overview/" class="w-full">Overview</a>
 	</span>
-<span class="flex justify-between items-center font-bold text-xl rounded-md duration-200 py-2 px-3 m-1 hover:bg-slate-200 dark:hover:bg-gray-800"><a href="/easy-rpc-docs/1💬 What is easy-rpc/2Features/" class="w-full">Features</a>
+<span class="flex justify-between items-center font-bold text-xl rounded-md duration-200 py-2 px-3 m-1 bg-slate-200 dark:bg-gray-800"><a href="/easy-rpc-docs/1💬 What is easy-rpc/2Features/" class="w-full">Features</a>
 	</span>
 </div><span class="flex justify-between items-center font-bold text-xl rounded-md duration-200 py-2 px-3 m-1 hover:bg-slate-200 dark:hover:bg-gray-800"><a href="/easy-rpc-docs/2🎭 Roles and Endpoints/" class="w-full">🎭 Roles and Endpoints</a>
 	</span>
 <span class="flex justify-between items-center font-bold text-xl rounded-md duration-200 py-2 px-3 m-1 hover:bg-slate-200 dark:hover:bg-gray-800"><a href="/easy-rpc-docs/3🖋️ Syntax/" class="w-full">🖋️ Syntax</a>
 	</span>
 </nav>
-		<main class="page h-full svelte-gg46l3"><div class="text-justify overflow-y-auto h-full w-full pb-40 svelte-oidmvb"><p>The official easy-rpc docs</p>
+		<main class="page h-full svelte-gg46l3"><div class="text-justify overflow-y-auto h-full w-full pb-40 svelte-oidmvb"><h1 id="features"><a aria-hidden="true" tabindex="-1" href="#features"><span class="icon icon-link"></span></a>Features</h1>
+<p>A short list of the most important easy-rpc features.</p>
+<h2 id="easy-to-learn-syntax"><a aria-hidden="true" tabindex="-1" href="#easy-to-learn-syntax"><span class="icon icon-link"></span></a>Easy to learn syntax</h2>
+<p>The easy-rpc syntax is very easy to learn. If you’ve ever written TypeScript, JavaScript, Java, C#, Go, Rust or really any modern programming language you’ll quickly get used to it. The syntax will be explained in detail in the <strong><a href="/easy-rpc-docs/2%F0%9F%96%8B%EF%B8%8F%20Syntax/">syntax section</a></strong> of the documentation.</p>
+<h2 id="single-source-of-truth"><a aria-hidden="true" tabindex="-1" href="#single-source-of-truth"><span class="icon icon-link"></span></a>Single source of truth</h2>
+<p>easy-rpc really shines when configured to share sources across projects. This can be done inside its configuration and is commonly done once when setting up a project. When sharing a single source of truth, mismatches between caller and reciever of a request are easily detected while devoloping or building the project. This is a difference to REST, where commonly the structure of requests is documented manually via OpenAPI or similar tools. With easy-rpc there is no documentation which can get out of sync.</p>
+<h2 id="language-server-and-vscode-addon"><a aria-hidden="true" tabindex="-1" href="#language-server-and-vscode-addon"><span class="icon icon-link"></span></a>Language server and VSCode addon</h2>
+<p>The language server and VSCode addon provide help while developing with easy-rpc. Most important: They update the generated clients while you type your .erpc files. This ensures you never have to run the easy-rpc transpiler manually and provides a smooth developer experience. Just type out your definition and instantly start using it.</p>
+<h2 id="fast-transpiler"><a aria-hidden="true" tabindex="-1" href="#fast-transpiler"><span class="icon icon-link"></span></a>Fast transpiler</h2>
+<p>The easy-rpc transpiler is written in Go and is optimized for concurrency and performance. It can handle hundreds of .erpc files in huge projects without a significant increase in build time. It’s well suited for automated build pipelines and CI/CD workflows.</p>
+<h2 id="real-time-communication-via-websockets"><a aria-hidden="true" tabindex="-1" href="#real-time-communication-via-websockets"><span class="icon icon-link"></span></a>Real time communication via WebSockets</h2>
+<p>easy-rpc uses roles to define entities which can communicate inside your application. Since easy-rpc is meant for Web Applications, it uses WebSockets to allow for endpoints defined inside the browser, callable from a server. All the socket handling is done under the hood. This is how easy WebSockets can be. Read more about Roles and Endpoints in <strong><a href="/easy-rpc-docs/2%F0%9F%8E%AD%20Roles%20and%20Endpoints/">their chapter</a></strong>.</p>
+<h2 id="remote-sources"><a aria-hidden="true" tabindex="-1" href="#remote-sources"><span class="icon icon-link"></span></a>Remote sources</h2>
+<p>easy-rpc allows for importing remote sources from source control providers like github or custom hosted websites. This allows for easy usage of APIs provided by others.</p>
+<h1 id="philosophy"><a aria-hidden="true" tabindex="-1" href="#philosophy"><span class="icon icon-link"></span></a>Philosophy</h1>
+<p>easy-rpc is meant to be simple and easy to use. Its goal is not to provide a solution for every problem that comes with web and web communication, but to make it easy, safe and accessible to write APIs for the web. Its highest priority is to provide a nice and clean developer experience and to make things enjoyable.</p>
+<h1 id="languages"><a aria-hidden="true" tabindex="-1" href="#languages"><span class="icon icon-link"></span></a>Languages</h1>
+<p>easy-rpc is currently generating TypeScript code meant for usage with Node.js. Since generating the actual Clients from the .erpc files is a very complex task which takes a lot of time, it might take a while until other languages will be supported. But is is planned to bring easy-rpc to all the languages commonly used for web development.</p>
 </div></main>
 		<section class="toc svelte-gg46l3"><ul class="list-none">
 </ul></section></div>
