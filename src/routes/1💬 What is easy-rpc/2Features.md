@@ -1,7 +1,7 @@
 # Features
 A short list of the most important easy-rpc features.
 ## Easy to learn syntax
-The easy-rpc syntax is very easy to learn. If you've ever written TypeScript, JavaScript, Java, C#, Go, Rust or really any modern programming language you'll quickly get used to it. The syntax will be explained in detail in the **[syntax section](/easy-rpc-docs/2🖋%EF%B8%8F%20Syntax/)** of the documentation.
+The easy-rpc syntax is very easy to learn. If you've ever written TypeScript, JavaScript, Java, C#, Go, Rust or really any modern programming language you'll quickly get used to it. The syntax will be explained in detail in the **[syntax section](/easy-rpc-docs/3🖋%EF%B8%8F%20Syntax/)** of the documentation.
 
 ## Single source of truth
 easy-rpc really shines when configured to share sources across projects. This can be done inside its configuration and is commonly done once when setting up a project. When sharing a single source of truth, mismatches between caller and reciever of a request are easily detected while devoloping or building the project. This is a difference to REST, where commonly the structure of requests is documented manually via OpenAPI or similar tools. With easy-rpc there is no documentation which can get out of sync.
