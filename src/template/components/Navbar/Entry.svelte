@@ -8,7 +8,9 @@
 	export let entry: NavEntry;
 	let expanded = true;
 
-	$: selected = $page.path == entry.path;
+	let name = entry.name.replace(/^[0-9]{1,}/, '');
+
+	$: selected = decodeURI($page.path.substring(1)) == entry.path;
 
 	function toggle(e: Event) {
 		expanded = !expanded;
@@ -22,14 +24,14 @@
 >
 	{#if entry.children.length == 0}
 		<a href="{dev ? '/' : '/easy-rpc-docs/'}{entry.path}" class="w-full">
-			{entry.name}
+			{name}
 		</a>
 	{:else if entry.indexPage}
 		<a href="{dev ? '/' : '/easy-rpc-docs/'}{entry.path}" class="w-full">
-			{entry.name}
+			{name}
 		</a>
 	{:else}
-		{entry.name}
+		{name}
 	{/if}
 	{#if entry.children.length > 0}
 		<button

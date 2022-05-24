@@ -8,6 +8,7 @@ import {
 	createShikiHighlighter,
 	renderCodeToHTML,
 } from "shiki-twoslash";
+import {readFileSync} from 'fs';
 
 const dev = process.env.NODE_ENV === 'development';
 
@@ -26,6 +27,13 @@ const config = {
 					const highlighter = await createShikiHighlighter({
 						theme: 'one-dark-pro',
 					});
+
+					highlighter.loadLanguage({
+						id: "easy-rpc",
+						scopeName: 'source.erpc',
+						grammar: JSON.parse(readFileSync("./src/grammars/erpc.json")),
+						aliases: ['erpc', 'easy-rpc'],
+					  })
 
 
 					const html = renderCodeToHTML(
