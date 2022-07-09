@@ -8,21 +8,21 @@
 
 		
 
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/start-3e66063d.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/start-9bc5763e.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/chunks/index-bcc14066.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/chunks/preload-helper-8ac02794.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/chunks/index-f8e4721c.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/pages/__layout.svelte-8a4834d2.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/pages/__layout.svelte-e13504e1.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/chunks/TableOfContent-fa0561d2.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/chunks/index-79a199b2.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/pages/1💬 What is easy-rpc/2Features.md-aa9655bc.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/chunks/Page-256ef71b.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/pages/1💬 What is easy-rpc/2Features.md-46d486e8.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/chunks/Page-31ba8706.js">
 		<link rel="stylesheet" href="/easy-rpc-docs/_app/assets/start-c446e5f0.css">
 		<link rel="stylesheet" href="/easy-rpc-docs/_app/assets/pages/__layout.svelte-7d3b7c3a.css">
 		<link rel="stylesheet" href="/easy-rpc-docs/_app/assets/Page-9ac59aa8.css">
 
 		<script type="module">
-			import { start } from "/easy-rpc-docs/_app/start-3e66063d.js";
+			import { start } from "/easy-rpc-docs/_app/start-9bc5763e.js";
 			start({
 				target: document.body,
 				paths: {"base":"/easy-rpc-docs","assets":""},
@@ -35,8 +35,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/easy-rpc-docs/_app/pages/__layout.svelte-8a4834d2.js"),
-						import("/easy-rpc-docs/_app/pages/1💬 What is easy-rpc/2Features.md-aa9655bc.js")
+						import("/easy-rpc-docs/_app/pages/__layout.svelte-e13504e1.js"),
+						import("/easy-rpc-docs/_app/pages/1💬 What is easy-rpc/2Features.md-46d486e8.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -77,7 +77,7 @@
 <h2 id="language-server-and-vscode-addon"><a aria-hidden="true" tabindex="-1" href="#language-server-and-vscode-addon"><span class="icon icon-link"></span></a>Language server and VSCode addon</h2>
 <p>The language server and VSCode addon provide help while developing with easy-rpc. Most important: They update the generated clients while you type your .erpc files. This ensures you never have to run the easy-rpc transpiler manually and provides a smooth developer experience. Just type out your definition and instantly start using it.</p>
 <h2 id="fast-transpiler"><a aria-hidden="true" tabindex="-1" href="#fast-transpiler"><span class="icon icon-link"></span></a>Fast transpiler</h2>
-<p>The easy-rpc transpiler is written in Go and is optimized for concurrency and performance. It can handle hundreds of .erpc files in huge projects without a significant increase in build time. It’s well suited for automated build pipelines and CI/CD workflows.</p>
+<p>The easy-rpc transpiler is written in Rust and is optimized for concurrency and performance. It can handle hundreds of .erpc files in huge projects without a significant increase in build time. It’s well suited for automated build pipelines and CI/CD workflows.</p>
 <h2 id="real-time-communication-via-websockets"><a aria-hidden="true" tabindex="-1" href="#real-time-communication-via-websockets"><span class="icon icon-link"></span></a>Real time communication via WebSockets</h2>
 <p>easy-rpc uses roles to define entities which can communicate inside your application. Since easy-rpc is meant for Web Applications, it uses WebSockets to allow for endpoints defined inside the browser, callable from a server. All the socket handling is done under the hood. This is how easy WebSockets can be. Read more about Roles and Endpoints in <strong><a href="/easy-rpc-docs/2%F0%9F%8E%AD%20Roles%20and%20Endpoints/">their chapter</a></strong>.</p>
 <h2 id="remote-sources"><a aria-hidden="true" tabindex="-1" href="#remote-sources"><span class="icon icon-link"></span></a>Remote sources</h2>
