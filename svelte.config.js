@@ -28,9 +28,10 @@ const config = {
 						theme: 'one-dark-pro',
 					});
 
-					highlighter.loadLanguage({
+					await highlighter.loadLanguage({
 						id: "easy-rpc",
 						scopeName: 'source.erpc',
+						// @ts-ignore
 						grammar: JSON.parse(readFileSync("./src/grammars/erpc.json")),
 						aliases: ['erpc', 'easy-rpc'],
 					  })
@@ -55,6 +56,9 @@ const config = {
 	],
 
 	kit: {
+		prerender: {
+			enabled: true
+		},
 		vite: {
 			resolve: {
 				alias: {
