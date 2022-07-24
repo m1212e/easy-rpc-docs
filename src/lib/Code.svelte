@@ -29,11 +29,11 @@
 			</span>
 			<span class="flex relative">
 				{#if showSuccess}
-					<span class="absolute right-2/4" transition:scale>
+					<span class="absolute right-2/4" transition:scale|local>
 						<CheckIcon class="text-green-400" />
 					</span>
 				{:else}
-					<button class="absolute right-2/4" transition:scale on:click={copy}>
+					<button title="Copy this snippet" class="absolute right-2/4" transition:scale|local on:click={copy}>
 						<CopyIcon />
 					</button>
 				{/if}
@@ -42,11 +42,11 @@
 	{:else}
 		<span class="flex absolute right-2 top-2">
 			{#if showSuccess}
-				<span class="absolute right-2/4" transition:scale>
+				<span class="absolute right-2/4" transition:scale|local>
 					<CheckIcon class="text-green-400" />
 				</span>
 			{:else}
-				<button class="absolute right-2/4" transition:scale on:click={copy}>
+				<button class="absolute right-2/4" transition:scale|local on:click={copy}>
 					<CopyIcon />
 				</button>
 			{/if}
