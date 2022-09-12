@@ -1,17 +1,26 @@
 <script>
 	import { darkModeActive } from '../template/stores/DarkMode';
-	import { GithubIcon } from 'svelte-feather-icons';
+	import { GithubIcon, MenuIcon } from 'svelte-feather-icons';
 	import TableOfContent from '../template/components/TableOfContent.svelte';
 	import DarkModeToggle from '../template/components/DarkModeToggle.svelte';
 	import Navbar from '../template/components/Navbar/Navbar.svelte';
+	import { fly } from 'svelte/transition';
+
+	let showNavbar = true;
 </script>
 
-<div class:dark={$darkModeActive} class="h-screen">
+<div class:dark={$darkModeActive} class="w-screen">
 	<div
-		class="bg-white dark:bg-gray-900 text-black dark:text-gray-300 duration-200 grid-container h-full"
+		class="flex flex-col bg-white dark:bg-gray-900 text-black dark:text-gray-300 duration-200 h-full w-full"
 	>
-		<span class="p-3 flex justify-between items-center head">
-			<a href='/easy-rpc-docs/'><span class="text-3xl font-bold">easy-rpc</span></a>
+		<!-- heading -->
+		<span class="p-3 flex justify-between items-center">
+			<span class="flex items-center">
+				<button class="block md:hidden" on:click={() => (showNavbar = !showNavbar)}>
+					<MenuIcon />
+				</button>
+				<a class="ml-4" href="/easy-rpc-docs/"> <span class="text-3xl font-bold">easy-rpc</span></a>
+			</span>
 			<span class="flex items-center space-x-4">
 				<a href="https://github.com/m1212e/easy-rpc"><GithubIcon /></a>
 				<DarkModeToggle />
@@ -19,44 +28,21 @@
 				<!-- <Search /> -->
 			</span>
 		</span>
-		<nav class="nav">
-			<Navbar />
-		</nav>
-		<main class="page h-full">
-			<slot />
-		</main>
-		<section class="toc">
-			<TableOfContent />
-		</section>
+
+		<!-- content -->
+		<div class="flex h-full">
+			{#if showNavbar}
+				<nav class="w-full" transition:fly={{ x: -100 }}>
+					<Navbar />
+				</nav>
+			{/if}
+			<!-- <main class="w-8/12 md:w-6/12 pb-20"> -->
+			<main class="grow pb-20">
+				<slot />
+			</main>
+			<section class="w-full">
+				<TableOfContent />
+			</section>
+		</div>
 	</div>
 </div>
-
-<style>
-	.grid-container {
-		display: grid;
-		grid-template-columns: 0.6fr 1.8fr 0.6fr;
-		grid-template-rows: 7% 93%;
-		grid-auto-columns: 1fr;
-		gap: 0em 1em;
-		grid-auto-flow: row;
-		grid-template-areas:
-			'head head head'
-			'nav page toc';
-	}
-
-	.head {
-		grid-area: head;
-	}
-
-	.nav {
-		grid-area: nav;
-	}
-
-	.page {
-		grid-area: page;
-	}
-
-	.toc {
-		grid-area: toc;
-	}
-</style>

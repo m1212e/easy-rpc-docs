@@ -42,7 +42,7 @@
 	{/if}
 </span>
 {#if expanded && entry.children.length > 0}
-	<div transition:slide class="pl-5">
+	<div transition:slide|local class="pl-5">
 		{#each entry.children as child}
 			<svelte:self entry={child} />
 		{/each}

@@ -1,7 +1,6 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 import {mdsvex} from 'mdsvex'
-import {resolve} from 'path'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
 import {
@@ -9,8 +8,6 @@ import {
 	renderCodeToHTML,
 } from "shiki-twoslash";
 import {readFileSync} from 'fs';
-
-const dev = process.env.NODE_ENV === 'development';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -34,7 +31,7 @@ const config = {
 						// @ts-ignore
 						grammar: JSON.parse(readFileSync("./src/grammars/erpc.json")),
 						aliases: ['erpc', 'easy-rpc'],
-					  })
+					})
 
 
 					const html = renderCodeToHTML(
@@ -64,7 +61,7 @@ const config = {
 			pages: "docs"
 		}),
 		paths: {
-			base: dev ? '' : '/easy-rpc-docs',
+			base: '/easy-rpc-docs',
 		}
 	},
 	extensions: ['.svelte', '.md'],

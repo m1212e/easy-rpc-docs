@@ -6,8 +6,6 @@
 # What is easy-rpc?
 
 easy-rpc is a **r**emote **p**rocedure **c**all framework which focuses on ease of use. It uses a custom declaration language which functions as a single source of truth and enables auto generated clients on both, server and client side. It was designed for usage in web contexts but is not limited to that. It uses HTTP to send and recieve calls.
-<br>
-It aims to be an addition to or a replacement of other web communication protocols like REST or gRPC.
 
 # What does it look like?
 
