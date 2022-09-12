@@ -1,20 +1,9 @@
-<script context="module">
-	import { dev } from '$app/env';
-	import Navbar from '../template/components/Navbar/Navbar.svelte';
-	import Search from '../template/components/Search/Search.svelte';
-	import DarkModeToggle from '../template/components/DarkModeToggle.svelte';
-	import { darkModeActive, setDarkMode } from '../template/stores/DarkMode';
+<script>
+	import { darkModeActive } from '../template/stores/DarkMode';
 	import { GithubIcon } from 'svelte-feather-icons';
-	import { browser } from '$app/env';
-	import '../app.css';
 	import TableOfContent from '../template/components/TableOfContent.svelte';
-
-	export async function load() {
-		if (browser) {
-			setDarkMode();
-		}
-		return {};
-	}
+	import DarkModeToggle from '../template/components/DarkModeToggle.svelte';
+	import Navbar from '../template/components/Navbar/Navbar.svelte';
 </script>
 
 <div class:dark={$darkModeActive} class="h-screen">
@@ -22,7 +11,7 @@
 		class="bg-white dark:bg-gray-900 text-black dark:text-gray-300 duration-200 grid-container h-full"
 	>
 		<span class="p-3 flex justify-between items-center head">
-			<a href={dev ? '/' : '/easy-rpc-docs/'}><span class="text-3xl font-bold">easy-rpc</span></a>
+			<a href='/easy-rpc-docs/'><span class="text-3xl font-bold">easy-rpc</span></a>
 			<span class="flex items-center space-x-4">
 				<a href="https://github.com/m1212e/easy-rpc"><GithubIcon /></a>
 				<DarkModeToggle />

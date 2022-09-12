@@ -1,16 +1,15 @@
 <script lang="ts">
-	import { dev } from '$app/env';
 	import { page } from '$app/stores';
+	import type { NavEntry } from 'src/template/interfaces/NavEntry';
 	import { ChevronDownIcon } from 'svelte-feather-icons';
 	import { slide } from 'svelte/transition';
-	import { NavEntry } from '../../interfaces/NavEntry';
 
 	export let entry: NavEntry;
 	let expanded = true;
 
 	let name = entry.name.replace(/^[0-9]{1,}/, '');
 
-	$: selected = decodeURI($page.path.substring(1)) == entry.path;
+	$: selected = decodeURI($page.url.pathname.substring(1)) == entry.path;
 
 	function toggle(e: Event) {
 		expanded = !expanded;
@@ -23,11 +22,11 @@
 		: 'hover:bg-slate-200 dark:hover:bg-gray-800'}"
 >
 	{#if entry.children.length == 0}
-		<a href="{dev ? '/' : '/easy-rpc-docs/'}{entry.path}" class="w-full">
+		<a href="{'/easy-rpc-docs/'}{entry.path}" class="w-full">
 			{name}
 		</a>
 	{:else if entry.indexPage}
-		<a href="{dev ? '/' : '/easy-rpc-docs/'}{entry.path}" class="w-full">
+		<a href="{'/easy-rpc-docs/'}{entry.path}" class="w-full">
 			{name}
 		</a>
 	{:else}

@@ -1,16 +1,14 @@
 <script lang="ts">
 	import Entry from './Entry.svelte';
-	import { NavEntry } from '../../interfaces/NavEntry';
+	import type { NavEntry } from '../../interfaces/NavEntry';
 
 	const paths = [
-		...Object.keys(import.meta.glob('../../../routes/**/*.svelte')),
-		...Object.keys(import.meta.glob('../../../routes/**/*.md'))
+		...Object.keys(import.meta.glob('../../../routes/**/+page.svelte')),
+		...Object.keys(import.meta.glob('../../../routes/**/+page.md'))
 	]
-		.map((f) => f.replace('../../../routes/', ''))
-		.map((f) => f.split('.').slice(-2)[0].split('/'))
-		.filter((f) => {
-			return !f.some((e) => e.startsWith('__' || e.includes('[')));
-		});
+		.map((f) => f.replace('../../../routes/', '')) //"1💬 What is easy-rpc/1Overview/+page.md"
+		.map((f) => f.split('.').slice(-2)[0].split('/')) // [ "1💬 What is easy-rpc", "1Overview", "+page" ]
+		.map((f) => f.slice(0, -1)); // [ "1💬 What is easy-rpc", "1Overview"])]
 
 	const navEntries: NavEntry[] = [];
 

@@ -59,13 +59,6 @@ const config = {
 		prerender: {
 			enabled: true
 		},
-		vite: {
-			resolve: {
-				alias: {
-					$lib: resolve('./src/lib')
-				}
-			}
-		},
 		trailingSlash: "always",
 		adapter: adapter({
 			pages: "docs"
