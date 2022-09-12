@@ -9,12 +9,12 @@
 	let showNavbar = true;
 </script>
 
-<div class:dark={$darkModeActive} class="w-screen">
+<div class:dark={$darkModeActive} class="w-screen h-screen">
 	<div
-		class="flex flex-col bg-white dark:bg-gray-900 text-black dark:text-gray-300 duration-200 h-full w-full"
+		class="flex flex-col bg-white dark:bg-gray-900 text-black dark:text-gray-300 duration-200 w-full h-full"
 	>
 		<!-- heading -->
-		<span class="p-3 flex justify-between items-center">
+		<span class="p-3 flex justify-between items-center head">
 			<span class="flex items-center">
 				<button class="block md:hidden" on:click={() => (showNavbar = !showNavbar)}>
 					<MenuIcon />
@@ -30,19 +30,27 @@
 		</span>
 
 		<!-- content -->
-		<div class="flex h-full">
+		<div class="flex content">
 			{#if showNavbar}
-				<nav class="w-full" transition:fly={{ x: -100 }}>
+				<nav class="w-5/12" transition:fly={{ x: -100 }}>
 					<Navbar />
 				</nav>
 			{/if}
-			<!-- <main class="w-8/12 md:w-6/12 pb-20"> -->
-			<main class="grow pb-20">
+			<main class="grow overflow-scroll mb-5">
 				<slot />
 			</main>
-			<section class="w-full">
+			<section class="w-5/12">
 				<TableOfContent />
 			</section>
 		</div>
 	</div>
 </div>
+
+<style>
+	.head {
+		height: 6%;
+	}
+	.content {
+		height: 94%;
+	}
+</style>

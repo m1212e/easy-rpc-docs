@@ -33,16 +33,6 @@
 	}
 </script>
 
-<div bind:this={child} class="text-justify overflow-y-auto h-full w-full" on:scroll={handleScroll}>
+<div bind:this={child} class="text-justify h-full w-full" on:scroll={handleScroll}>
 	<slot />
 </div>
-
-<style>
-	.overflow-y-auto::-webkit-scrollbar {
-		display: none;
-	}
-	.overflow-y-auto {
-		-ms-overflow-style: none;
-		scrollbar-width: none;
-	}
-</style>
