@@ -32,14 +32,14 @@
 		<!-- content -->
 		<div class="flex content">
 			{#if showNavbar}
-				<nav class="w-5/12" transition:fly={{ x: -100 }}>
+				<nav class="navbar" transition:fly={{ x: -100 }}>
 					<Navbar />
 				</nav>
 			{/if}
 			<main class="grow overflow-scroll mb-5">
 				<slot />
 			</main>
-			<section class="w-5/12">
+			<section class="hidden md:block w-5/12">
 				<TableOfContent />
 			</section>
 		</div>
@@ -53,4 +53,14 @@
 	.content {
 		height: 94%;
 	}
+
+	.navbar {
+		width: 183rem;
+	}
+	
+	@media (min-width: 768px) { 
+		.navbar {
+			width: 110%;
+		}
+	 }
 </style>
