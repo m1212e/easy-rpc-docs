@@ -1,0 +1,1 @@
+import{A as o}from"./index-5459d0c8.js";const e="darkModeDeactivated",t=o(!0);function s(){localStorage.getItem(e)=="true"&&t.set(!1),t.subscribe(a=>{a?localStorage.removeItem(e):localStorage.setItem(e,"true")})}export{t as d,s};

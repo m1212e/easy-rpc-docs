@@ -51,7 +51,7 @@
 				</button>
 			{/if}
 		</span>{/if}
-	<code bind:this={slot} class="p-3">
+	<code bind:this={slot} class="p-3 overflow-scroll">
 		<slot />
 	</code>
 </div>

@@ -1,13 +1,16 @@
-<script>
+<script lang="ts">
 	import { darkModeActive } from '../template/stores/DarkMode';
 	import { GithubIcon, MenuIcon } from 'svelte-feather-icons';
 	import TableOfContent from '../template/components/TableOfContent.svelte';
 	import DarkModeToggle from '../template/components/DarkModeToggle.svelte';
 	import Navbar from '../template/components/Navbar/Navbar.svelte';
+	import { navbarVisible } from '../template/components/Navbar/state';
 	import { fly } from 'svelte/transition';
 
-	let showNavbar = true;
+	let innerWidth = 0;
 </script>
+
+<svelte:window bind:innerWidth />
 
 <div class:dark={$darkModeActive} class="w-screen h-screen">
 	<div
@@ -16,7 +19,7 @@
 		<!-- heading -->
 		<span class="p-3 flex justify-between items-center head">
 			<span class="flex items-center">
-				<button class="block md:hidden" on:click={() => (showNavbar = !showNavbar)}>
+				<button class="block md:hidden" on:click={() => ($navbarVisible = !$navbarVisible)}>
 					<MenuIcon />
 				</button>
 				<a class="ml-4" href="/easy-rpc-docs/"> <span class="text-3xl font-bold">easy-rpc</span></a>
@@ -31,15 +34,15 @@
 
 		<!-- content -->
 		<div class="flex content">
-			{#if showNavbar}
-				<nav class="navbar" transition:fly={{ x: -100 }}>
+			{#if $navbarVisible || innerWidth > 768}
+				<nav class="navbarWidth" transition:fly={{ x: -100, duration: 400 }}>
 					<Navbar />
 				</nav>
 			{/if}
 			<main class="grow overflow-scroll mb-5">
 				<slot />
 			</main>
-			<section class="hidden md:block w-5/12">
+			<section class="hidden md:block toc">
 				<TableOfContent />
 			</section>
 		</div>
@@ -54,13 +57,17 @@
 		height: 94%;
 	}
 
-	.navbar {
-		width: 183rem;
+	.navbarWidth {
+		width: 180rem;
 	}
-	
-	@media (min-width: 768px) { 
-		.navbar {
-			width: 110%;
+
+	.toc {
+		width: 50rem;
+	}
+
+	@media (min-width: 768px) {
+		.navbarWidth {
+			width: 70rem;
 		}
-	 }
+	}
 </style>

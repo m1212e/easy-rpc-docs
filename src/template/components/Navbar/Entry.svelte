@@ -3,6 +3,7 @@
 	import type { NavEntry } from 'src/template/interfaces/NavEntry';
 	import { ChevronDownIcon } from 'svelte-feather-icons';
 	import { slide } from 'svelte/transition';
+	import { navbarVisible } from './state';
 
 	export let entry: NavEntry;
 	let expanded = true;
@@ -22,11 +23,19 @@
 		: 'hover:bg-slate-200 dark:hover:bg-gray-800'}"
 >
 	{#if entry.children.length == 0}
-		<a href="{'/easy-rpc-docs/'}{entry.path}" class="w-full">
+		<a
+			href="{'/easy-rpc-docs/'}{entry.path}"
+			class="w-full"
+			on:click={() => ($navbarVisible = false)}
+		>
 			{name}
 		</a>
 	{:else if entry.indexPage}
-		<a href="{'/easy-rpc-docs/'}{entry.path}" class="w-full">
+		<a
+			href="{'/easy-rpc-docs/'}{entry.path}"
+			class="w-full"
+			on:click={() => ($navbarVisible = false)}
+		>
 			{name}
 		</a>
 	{:else}

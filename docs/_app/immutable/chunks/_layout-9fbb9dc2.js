@@ -1,1 +1,0 @@
-import{s as e}from"./DarkMode-d1dfc32e.js";const o=!0;async function t(){return e(),{}}const a=Object.freeze(Object.defineProperty({__proto__:null,prerender:o,load:t},Symbol.toStringTag,{value:"Module"}));export{a as _,t as l,o as p};
