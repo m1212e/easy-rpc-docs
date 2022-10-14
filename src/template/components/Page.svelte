@@ -33,6 +33,6 @@
 	}
 </script>
 
-<div bind:this={child} class="text-justify h-full w-full px-6" on:scroll={handleScroll}>
+<div bind:this={child} class="text-justify" on:scroll={handleScroll}>
 	<slot />
 </div>

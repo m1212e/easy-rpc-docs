@@ -15,9 +15,6 @@ The easy-rpc transpiler is written in Rust and is optimized for concurrency and 
 ## Real time communication via WebSockets
 easy-rpc uses roles to define entities which can communicate inside your application. Since easy-rpc is meant for Web Applications, it uses WebSockets to allow for endpoints defined inside the browser, callable from a server. All the socket handling is done under the hood. This is how easy WebSockets can be. Read more about Roles and Endpoints in **[their chapter](/easy-rpc-docs/2🎭%20Roles%20and%20Endpoints/)**.
 
-## Remote sources
-easy-rpc allows for importing remote sources from source control providers like github or custom hosted websites. This allows for easy usage of APIs provided by others.
-
 # Philosophy
 easy-rpc is meant to be simple and easy to use. Its goal is not to provide a solution for every problem that comes with web and web communication, but to make it easy, safe and accessible to write APIs for the web. Its highest priority is to provide a nice and clean developer experience and to make things enjoyable.
 
