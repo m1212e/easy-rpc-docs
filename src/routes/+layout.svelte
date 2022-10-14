@@ -64,7 +64,7 @@
 	}
 
 	.content-width {
-		width: 45rem;
+		width: 61vw;
 	}
 
 	@media (max-width: 1200px) {
