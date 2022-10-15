@@ -47,7 +47,7 @@
 			>
 				<Navbar />
 			</nav>
-			<main class="p-5 content-width min-h-screen">
+			<main class="px-5 py-10 content-width min-h-screen">
 				<slot />
 			</main>
 			<section class="hidden md:block fixed w-56 right-0 top-12">
