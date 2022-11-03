@@ -37,7 +37,7 @@ They can be called like this:
 ```ts
 const server = new Server(/* here goes some config */);
 
-const result = await server.auth.register('my.email.adress@example.com', 'MyVerySecurePassword');
+const result = await server.auth.register('my.email.address@example.com', 'MyVerySecurePassword');
 /*
     result is strongly typed as "success" | "passwordTooShort" | "emailTaken"
 */
