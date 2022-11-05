@@ -72,3 +72,6 @@ server.start();
 </Code>
 
 The request and response are strongly typed and intellisense is provided as you implement your calls. And because both client and server use the same .erpc source files they never get out of sync. Mismatching calls will be detected at build- and not runtime.
+  
+Want to dive right in?
+See **[getting started](/easy-rpc-docs/2🛠️%20Getting%20started/)**
