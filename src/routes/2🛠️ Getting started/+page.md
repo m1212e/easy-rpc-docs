@@ -8,7 +8,7 @@ There are two ways to get started with easy-rpc. The template is a little easier
 
 ## Template
 
-Clone it from [here (https://github.com/m1212e/easy-rpc-project-template)](https://github.com/m1212e/easy-rpc-project-template).
+Clone it from **[here (https://github.com/m1212e/easy-rpc-project-template)](https://github.com/m1212e/easy-rpc-project-template)**.
 
 The README.md files in the template explain the setup and what can be found where.
 
