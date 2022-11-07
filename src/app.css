@@ -46,7 +46,3 @@ h6 {
 .language-id {
 	display: none;
 }
-
-code {
-	@apply text-gray-300 bg-gray-900;
-}

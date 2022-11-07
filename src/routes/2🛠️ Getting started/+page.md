@@ -20,7 +20,9 @@ Now think about which roles you need for this project. If you are not familiar w
   
 After creating directories for our roles, we need a directory to store our source files which contain the information about the actual endpoints which are offered by each role. Both, frontend and backend can access the sources and generate the code to call the endpoints accordingly. In this example we will use the `/webapp/sources` directory for that.
 
-Our current structure looks like this:
+Our current structure looks like this
+
+<Code>
 
 ```
 webapp
@@ -28,6 +30,8 @@ webapp
 ├── backend
 └── sources
 ```
+
+</Code>
 
 ### Sources
 
@@ -65,6 +69,8 @@ Frontend ping(msg string) string
 
 The sources directory is now set up. We configured two roles and gave them one endpoint each. The file structure now looks like this
 
+<Code>
+
 ```
 webapp
 ├── frontend
@@ -75,6 +81,8 @@ webapp
     ├── api.erpc
     └── roles.json
 ```
+
+</Code>
 
 ### Backend
 As configured in the sources directory, our backend will function as an http-server. To do this we need an npm package. Install it inside `/webapp/backend` with
@@ -140,6 +148,8 @@ Finally, we create the `/webapp/backend/main.ts` and leave it empty for now.
   
 The directory structure should now look like this
 
+<Code>
+
 ```
 webapp
 ├── frontend
@@ -156,6 +166,8 @@ webapp
     ├── api.erpc
     └── roles.json
 ```
+
+</Code>
 
 ### Frontend
 It's recommended to use a bundler tool which optimizes your project when you work on browser apps. In this example [vite](https://vitejs.dev/) is used, but you can use other frameworks or tools you prefer. Set up vite inside `/webapp/frontend` with
@@ -182,6 +194,8 @@ npm i @easy-rpc/browser
 Vite did create a few directories which will become handy when developing your webapp. Take a look at the `/webapp/frontend/src` directory, you will find a few files where we later on will put our code into. A small demo app is automatically created, feel free to delete it.
   
 The directory structure should now look like this
+
+<Code>
 
 ```
 webapp
@@ -215,5 +229,7 @@ webapp
     └── roles.json
 ```
 
+</Code>
+
 ### Vscode extension
-Finally, we just need to install the transpiler. You can either find the binaries at [https://github.com/m1212e/easy-rpc/releases](https://github.com/m1212e/easy-rpc/releases)(instructions for running the binary can be found in the [easy-rpc repository](https://github.com/m1212e/easy-rpc)) or you can use the [Vscode extension](https://marketplace.visualstudio.com/items?itemName=easy-rpc.easy-rpc). Just install it and you're good to go. 
+Finally, we just need to install the transpiler. You can either find the binaries at **[https://github.com/m1212e/easy-rpc/releases](https://github.com/m1212e/easy-rpc/releases)**(instructions for running the binary can be found in the **[easy-rpc repository](https://github.com/m1212e/easy-rpc)**) or you can use the **[Vscode extension](https://marketplace.visualstudio.com/items?itemName=easy-rpc.easy-rpc)**. Just install it and you're good to go. 
