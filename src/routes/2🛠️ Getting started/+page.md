@@ -52,7 +52,7 @@ The `roles.json` defines, which roles exist for this source directory. We tell e
 
 </Code>
 
-The `api.erpc` file defines two endpoints, one on each role. If you are not familiar with easy-rpc syntax, see the **[syntax section](/easy-rpc-docs/4🖋%EF%B8%8F%20Syntax/)**
+The `api.erpc` file defines two endpoints, one on each role. If you are not familiar with easy-rpc syntax, see the **[syntax section](/easy-rpc-docs/4🖋%EF%B8%8F%20Syntax/)**. Ofcourse you can add more `.erpc` files or more endpoints to the `api.erpc` file to suit the needs of you app.
 
 <Code filename="/webapp/sources/api.erpc">
 
@@ -68,14 +68,16 @@ The sources directory is now set up. We configured two roles and gave them one e
 ```
 webapp
 ├── frontend
+│
 ├── backend
+│
 └── sources
     ├── api.erpc
     └── roles.json
 ```
 
 ### Backend
-As configured in the sources directory, out backend will function as an http-server. To do this we need an npm package. Install it inside `/webapp/backend` with
+As configured in the sources directory, our backend will function as an http-server. To do this we need an npm package. Install it inside `/webapp/backend` with
 
 <Code>
 
@@ -101,7 +103,7 @@ npm i ts-node
 
 For convenience you can add a script inside the `package.json` which will start a `main.ts` file which we still have to create. The whole `package.json` now looks like this
 
-<Code filename="package.json">
+<Code filename="`/webapp/backend/package.json">
 
 ```json
 {
@@ -109,10 +111,109 @@ For convenience you can add a script inside the `package.json` which will start 
     "start": "npx ts-node main.ts"
   },
   "dependencies": {
-    "ts-node": "^10.9.1"
+    "@easy-rpc/node": "latest",
+    "ts-node": "latest"
   }
 }
 
 ```
 
 </Code>
+
+Now we create the `/webapp/backend/erpc.json`. This file tells easy-rpc that this directory is meant to be an easy-rpc role implementation. The file looks like this
+
+<Code filename="/webapp/backend/erpc.json">
+
+```json
+{
+    "sources": ["../sources"],
+    "role": "Backend"
+}
+
+```
+
+</Code>
+
+In the sources array we can configure all source directories which should be used. In our case there is only one. The role parameter tells easy-rpc which role should be used for generation. It must match one of those configured in `/webapp/sources/roles.json`.
+  
+Finally, we create the `/webapp/backend/main.ts` and leave it empty for now.
+  
+The directory structure should now look like this
+
+```
+webapp
+├── frontend
+│
+├── backend
+│   ├── node_modules
+│   │   └── ...
+│   ├── erpc.json
+│   ├── main.ts
+│   ├── package-lock.json
+│   └── package.json
+│
+└── sources
+    ├── api.erpc
+    └── roles.json
+```
+
+### Frontend
+It's recommended to use a bundler tool which optimizes your project when you work on browser apps. In this example [vite](https://vitejs.dev/) is used, but you can use other frameworks or tools you prefer. Set up vite inside `/webapp/frontend` with
+<Code>
+
+```bash
+npm create vite@latest . -- --template vanilla-ts
+```
+
+</Code>
+
+You can just hit enter or customize the package name to your liking when vite asks for it after entering the create command.
+  
+The frontend was configured to be a browser. Therefore we need the `@easy-rpc/browser` package to run it. Import it with
+
+<Code>
+
+```bash
+npm i @easy-rpc/browser
+```
+
+</Code>
+
+Vite did create a few directories which will become handy when developing your webapp. Take a look at the `/webapp/frontend/src` directory, you will find a few files where we later on will put our code into. A small demo app is automatically created, feel free to delete it.
+  
+The directory structure should now look like this
+
+```
+webapp
+├── frontend
+│   ├── node_modules
+│   │   └── ...
+│   ├── public
+│   │   └── vite.svg
+│   ├── src
+│   │   ├── counter.ts
+│   │   ├── main.ts
+│   │   ├── style.css
+│   │   ├── typescript.svg
+│   │   └── vite-env.d.ts
+│   ├── .gitignore
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── backend
+│   ├── node_modules
+│   │   └── ...
+│   ├── erpc.json
+│   ├── main.ts
+│   ├── package-lock.json
+│   └── package.json
+│
+└── sources
+    ├── api.erpc
+    └── roles.json
+```
+
+### Vscode extension
+Finally, we just need to install the transpiler. You can either find the binaries at [https://github.com/m1212e/easy-rpc/releases](https://github.com/m1212e/easy-rpc/releases)(instructions for running the binary can be found in the [easy-rpc repository](https://github.com/m1212e/easy-rpc)) or you can use the [Vscode extension](https://marketplace.visualstudio.com/items?itemName=easy-rpc.easy-rpc). Just install it and you're good to go. 

@@ -48,8 +48,5 @@ h6 {
 }
 
 code {
-	margin-top: .1rem;
-	margin-bottom: .1rem;
-	padding: .1rem;
-	background-color: #282c34
+	@apply text-gray-300 bg-gray-900;
 }
