@@ -2,7 +2,7 @@
     import Code from '$lib/Code.svelte';
 </script>
 
-# Getting started with easy-rpc
+# Setting up easy-rpc
 
 There are two ways to get started with easy-rpc. The template is a little easier, but doesn't teach you a lot about the file structure, configuration and setup. The step by step guide to create the project manually takes slightly more time but explains what needs to be where and how easy-rpc can be configured. For first time users it is recommended to create the project manually.
 
