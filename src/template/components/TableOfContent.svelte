@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { tableOfContent, setActiveEntry } from '../stores/TableOfContent';
+	//class:selected={item.selected}
 </script>
 
 <ul class="list-none">
 	{#each $tableOfContent as item}
-		<li class={item.type + " py-1"} class:selected={item.selected} on:click={() => setActiveEntry(item.id)}>
+		<li class={item.type + " py-1"}  on:click={() => setActiveEntry(item.id)}>
 			<a href="#{item.id}">
 				{item.text}
 			</a>

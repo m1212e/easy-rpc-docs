@@ -9,30 +9,30 @@
 
 	onMount(() => {
 		setTOCFromPageContent(child);
-		let first = true
+		// let first = true
 		child.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach((e) => {
-			if(first) {
-				setActiveEntry(e.id);
-				first = false
-			}
+			// if(first) {
+			// 	setActiveEntry(e.id);
+			// 	first = false
+			// }
 			sectionOffsets[e.id] = e.offsetTop;
 		});
 		
 	});
 
-	function handleScroll() {
-		for (const sectionId in sectionOffsets) {
-			if (child.scrollTop >= sectionOffsets[sectionId]-150) {
-				currentScrolledSectionId = sectionId;
-				clearTimeout(scrollDebouncer);
-				scrollDebouncer = setTimeout(() => {
-					setActiveEntry(currentScrolledSectionId);
-				}, 50);
-			}
-		}
-	}
+	// function handleScroll() {
+	// 	for (const sectionId in sectionOffsets) {
+	// 		if (child.scrollTop >= sectionOffsets[sectionId]-150) {
+	// 			currentScrolledSectionId = sectionId;
+	// 			clearTimeout(scrollDebouncer);
+	// 			scrollDebouncer = setTimeout(() => {
+	// 				setActiveEntry(currentScrolledSectionId);
+	// 			}, 50);
+	// 		}
+	// 	}
+	// }
 </script>
 
-<div bind:this={child} class="text-justify" on:scroll={handleScroll}>
+<div bind:this={child} class="text-justify">
 	<slot />
 </div>
