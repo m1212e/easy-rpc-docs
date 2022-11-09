@@ -13,7 +13,7 @@ The language server and VSCode addon provide help while developing with easy-rpc
 The easy-rpc transpiler is written in Rust and is optimized for concurrency and performance. It can handle hundreds of .erpc files in huge projects without a significant increase in build time. It's well suited for automated build pipelines and CI/CD workflows.
 
 ## Real time communication via WebSockets
-easy-rpc uses roles to define entities which can communicate inside your application. Since easy-rpc is meant for Web Applications, it uses WebSockets to allow for endpoints defined inside the browser, callable from a server. All the socket handling is done under the hood. This is how easy WebSockets can be. Read more about Roles and Endpoints in **[their chapter](/easy-rpc-docs/3🎭%20Roles%20and%20Endpoints/)**.
+easy-rpc uses roles to define entities which can communicate inside your application. Since easy-rpc is meant for Web Applications, it uses WebSockets to allow for endpoints defined inside the browser, callable from a server. All the socket handling is done under the hood. This is how easy WebSockets can be. Read more about Roles and Endpoints in **[their chapter](/easy-rpc-docs/3🎭%20Roles%20and%20endpoints/)**.
 
 # Philosophy
 easy-rpc is meant to be simple and easy to use. Its goal is not to provide a solution for every problem that comes with web and web communication, but to make it easy, safe and accessible to write APIs for the web. Its highest priority is to provide a nice and clean developer experience and to make things enjoyable.

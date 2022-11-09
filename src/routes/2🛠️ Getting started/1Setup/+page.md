@@ -16,7 +16,7 @@ The README.md files in the template explain the setup and what can be found wher
 
 First, choose a directory you want to create the project in. In this example we will create the directory `/webapp`.
   
-Now think about which roles you need for this project. If you are not familiar with the concept of easy-rpc roles, you can read about them **[here](/easy-rpc-docs/3🎭%20Roles%20and%20Endpoints/)**. The question you need to ask yourself is: what entities exist in this project and what is their purpose. Depending on your scenario you can choose multiple browser and http-server roles. In our case we want a simple webapp setup consisting of one kind of server and one kind of client. We'll call them "Backend" and "Frontend". We create directories accordingly: `/webapp/frontend`, `/webapp/backend`.
+Now think about which roles you need for this project. If you are not familiar with the concept of easy-rpc roles, you can read about them **[here](/easy-rpc-docs/3🎭%20Roles%20and%20endpoints/)**. The question you need to ask yourself is: what entities exist in this project and what is their purpose. Depending on your scenario you can choose multiple browser and http-server roles. In our case we want a simple webapp setup consisting of one kind of server and one kind of client. We'll call them "Backend" and "Frontend". We create directories accordingly: `/webapp/frontend`, `/webapp/backend`.
   
 After creating directories for our roles, we need a directory to store our source files which contain the information about the actual endpoints which are offered by each role. Both, frontend and backend can access the sources and generate the code to call the endpoints accordingly. In this example we will use the `/webapp/sources` directory for that.
 
@@ -56,7 +56,10 @@ The `roles.json` defines, which roles exist for this source directory. We tell e
 
 </Code>
 
-The `api.erpc` file defines two endpoints, one on each role. If you are not familiar with easy-rpc syntax, see the **[syntax section](/easy-rpc-docs/4🖋%EF%B8%8F%20Syntax/)**. Ofcourse you can add more `.erpc` files or more endpoints to the `api.erpc` file to suit the needs of you app.
+The `api.erpc` file defines two endpoints, one on each role.
+Ofcourse you can add more `.erpc` files or more endpoints to the `api.erpc` file to suit the needs of you app.
+
+> If you are not familiar with easy-rpc syntax, see the **[syntax section](/easy-rpc-docs/4🖋%EF%B8%8F%20Syntax/)**
 
 <Code filename="/webapp/sources/api.erpc">
 
@@ -95,7 +98,9 @@ npm i @easy-rpc/node
 
 </Code>
 
-This should create a `package.json` and `package-lock.json` file where you can see the added dependency. Internally, the server code is written in Rust. The installed package is an adapter to make the Rust code useable from JavaScript. The used native `.node` file will be downloaded and stored into your `node_modules` directory. Some bundlers cannot handle these kind of packages by default, keep this in mind when you use a bundler tool.
+This should create a `package.json` and `package-lock.json` file where you can see the added dependency.
+
+> Internally, the server code is written in Rust. The installed package is an adapter to make the Rust code useable from JavaScript. The used native `.node` file will be downloaded and stored into your `node_modules` directory. Some bundlers cannot handle these kind of packages by default, keep this in mind when you use a bundler tool. See the **[template](https://github.com/m1212e/easy-rpc-project-template)** for an example setup with esbuild.
   
 To make use of the generated TypeScript code, we need a way to run TypeScript. `ts-node` is a package which allows us to do this without much configuration. But you can use any other tool you want. The [template](#Template) uses `esbuild` to process and run TypeScript.
   

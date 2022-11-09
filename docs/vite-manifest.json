@@ -1,11 +1,11 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-23f9289e.js",
+    "file": "_app/immutable/start-f08a0ba8.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-7ac94c92.js",
-      "_singletons-ddf5a580.js",
+      "_singletons-e1b67400.js",
       "_preload-helper-b21cceae.js"
     ],
     "dynamicImports": [
@@ -21,7 +21,7 @@
     ]
   },
   "src/routes/+layout.svelte": {
-    "file": "_app/immutable/components/pages/_layout.svelte-cc80e44e.js",
+    "file": "_app/immutable/components/pages/_layout.svelte-8e46c6cf.js",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
@@ -29,7 +29,7 @@
       "_DarkMode-f349345e.js",
       "_TableOfContent-71c2b9bf.js",
       "_preload-helper-b21cceae.js",
-      "_stores-1f93e645.js",
+      "_stores-a2e70929.js",
       "_index-127ce783.js"
     ],
     "dynamicImports": [
@@ -38,7 +38,7 @@
       "src/routes/1💬 What is easy-rpc/2Features/+page.md",
       "src/routes/2🛠️ Getting started/1Setup/+page.md",
       "src/routes/2🛠️ Getting started/2Working with easy-rpc/+page.md",
-      "src/routes/3🎭 Roles and Endpoints/+page.md",
+      "src/routes/3🎭 Roles and endpoints/+page.md",
       "src/routes/4🖋️ Syntax/+page.md"
     ],
     "css": [
@@ -46,12 +46,12 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-c00eab09.js",
+    "file": "_app/immutable/components/error.svelte-8e61641f.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_index-7ac94c92.js",
-      "_stores-1f93e645.js"
+      "_stores-a2e70929.js"
     ]
   },
   "src/routes/+page.md": {
@@ -76,7 +76,7 @@
     ]
   },
   "src/routes/1💬 What is easy-rpc/2Features/+page.md": {
-    "file": "_app/immutable/components/pages/1💬 What is easy-rpc/2Features/_page.md-4b0d024e.js",
+    "file": "_app/immutable/components/pages/1💬 What is easy-rpc/2Features/_page.md-1bde2b16.js",
     "src": "src/routes/1💬 What is easy-rpc/2Features/+page.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -86,7 +86,7 @@
     ]
   },
   "src/routes/2🛠️ Getting started/1Setup/+page.md": {
-    "file": "_app/immutable/components/pages/2🛠️ Getting started/1Setup/_page.md-2c2b555d.js",
+    "file": "_app/immutable/components/pages/2🛠️ Getting started/1Setup/_page.md-eb7b1134.js",
     "src": "src/routes/2🛠️ Getting started/1Setup/+page.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -107,24 +107,26 @@
       "_Code-6d2e2b36.js"
     ]
   },
-  "src/routes/3🎭 Roles and Endpoints/+page.md": {
-    "file": "_app/immutable/components/pages/3🎭 Roles and Endpoints/_page.md-512eecb2.js",
-    "src": "src/routes/3🎭 Roles and Endpoints/+page.md",
+  "src/routes/3🎭 Roles and endpoints/+page.md": {
+    "file": "_app/immutable/components/pages/3🎭 Roles and endpoints/_page.md-9d867d04.js",
+    "src": "src/routes/3🎭 Roles and endpoints/+page.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-7ac94c92.js",
-      "_Page-c0f2c207.js"
+      "_Page-c0f2c207.js",
+      "_Code-6d2e2b36.js"
     ]
   },
   "src/routes/4🖋️ Syntax/+page.md": {
-    "file": "_app/immutable/components/pages/4🖋️ Syntax/_page.md-c7c029a7.js",
+    "file": "_app/immutable/components/pages/4🖋️ Syntax/_page.md-71515a08.js",
     "src": "src/routes/4🖋️ Syntax/+page.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-7ac94c92.js",
-      "_Page-c0f2c207.js"
+      "_Page-c0f2c207.js",
+      "_Code-6d2e2b36.js"
     ]
   },
   "src/routes/+layout.js": {
@@ -136,8 +138,8 @@
       "__layout-6bdfc1ff.js"
     ]
   },
-  "_singletons-ddf5a580.js": {
-    "file": "_app/immutable/chunks/singletons-ddf5a580.js",
+  "_singletons-e1b67400.js": {
+    "file": "_app/immutable/chunks/singletons-e1b67400.js",
     "imports": [
       "_index-7ac94c92.js"
     ]
@@ -166,11 +168,11 @@
       "_index-7ac94c92.js"
     ]
   },
-  "_stores-1f93e645.js": {
-    "file": "_app/immutable/chunks/stores-1f93e645.js",
+  "_stores-a2e70929.js": {
+    "file": "_app/immutable/chunks/stores-a2e70929.js",
     "imports": [
       "_index-7ac94c92.js",
-      "_singletons-ddf5a580.js"
+      "_singletons-e1b67400.js"
     ]
   },
   "__layout-6bdfc1ff.js": {
@@ -200,7 +202,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-5a77be66.js",
+    "file": "_app/immutable/chunks/0-7ab2ea8d.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -209,7 +211,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-af31b8c5.js",
+    "file": "_app/immutable/chunks/1-526a8502.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -233,7 +235,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/4.js": {
-    "file": "_app/immutable/chunks/4-74bfc9f8.js",
+    "file": "_app/immutable/chunks/4-e9957ae6.js",
     "src": ".svelte-kit/generated/nodes/4.js",
     "isDynamicEntry": true,
     "imports": [
@@ -241,7 +243,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/5.js": {
-    "file": "_app/immutable/chunks/5-f4c45a5a.js",
+    "file": "_app/immutable/chunks/5-88ed2fd6.js",
     "src": ".svelte-kit/generated/nodes/5.js",
     "isDynamicEntry": true,
     "imports": [
@@ -257,15 +259,15 @@
     ]
   },
   ".svelte-kit/generated/nodes/7.js": {
-    "file": "_app/immutable/chunks/7-3ba1f9d5.js",
+    "file": "_app/immutable/chunks/7-2551d752.js",
     "src": ".svelte-kit/generated/nodes/7.js",
     "isDynamicEntry": true,
     "imports": [
-      "src/routes/3🎭 Roles and Endpoints/+page.md"
+      "src/routes/3🎭 Roles and endpoints/+page.md"
     ]
   },
   ".svelte-kit/generated/nodes/8.js": {
-    "file": "_app/immutable/chunks/8-e67a6470.js",
+    "file": "_app/immutable/chunks/8-0df55629.js",
     "src": ".svelte-kit/generated/nodes/8.js",
     "isDynamicEntry": true,
     "imports": [

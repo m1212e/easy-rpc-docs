@@ -8,19 +8,20 @@
 		<link href="/easy-rpc-docs/_app/immutable/assets/_layout-ad844061.css" rel="stylesheet">
 		<link href="/easy-rpc-docs/_app/immutable/assets/Code-5df0ceee.css" rel="stylesheet">
 		<link href="/easy-rpc-docs/_app/immutable/assets/_layout-3c4f9c05.css" rel="stylesheet">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/start-23f9289e.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/start-f08a0ba8.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/index-7ac94c92.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/singletons-ddf5a580.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/singletons-e1b67400.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/preload-helper-b21cceae.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/components/pages/_layout.svelte-cc80e44e.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/components/pages/_layout.svelte-8e46c6cf.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/DarkMode-f349345e.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/TableOfContent-71c2b9bf.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/stores-1f93e645.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/stores-a2e70929.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/index-127ce783.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/modules/pages/_layout.js-0cc788e0.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/_layout-6bdfc1ff.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/components/pages/4🖋️ Syntax/_page.md-c7c029a7.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/components/pages/4🖋️ Syntax/_page.md-71515a08.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/Page-c0f2c207.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/Code-6d2e2b36.js">
 	</head>
 	<body>
 		<div>
@@ -51,21 +52,89 @@
 	</span>
 <span class="flex justify-between items-center font-bold text-xl rounded-md duration-200 py-2 px-3 m-1 hover:bg-slate-200 dark:hover:bg-gray-800"><a href="/easy-rpc-docs/2🛠️ Getting started/2Working with easy-rpc/" class="w-full">Working with easy-rpc</a>
 	</span>
-</div><span class="flex justify-between items-center font-bold text-xl rounded-md duration-200 py-2 px-3 m-1 hover:bg-slate-200 dark:hover:bg-gray-800"><a href="/easy-rpc-docs/3🎭 Roles and Endpoints/" class="w-full">🎭 Roles and Endpoints</a>
+</div><span class="flex justify-between items-center font-bold text-xl rounded-md duration-200 py-2 px-3 m-1 hover:bg-slate-200 dark:hover:bg-gray-800"><a href="/easy-rpc-docs/3🎭 Roles and endpoints/" class="w-full">🎭 Roles and endpoints</a>
 	</span>
 <span class="flex justify-between items-center font-bold text-xl rounded-md duration-200 py-2 px-3 m-1 hover:bg-slate-200 dark:hover:bg-gray-800"><a href="/easy-rpc-docs/4🖋️ Syntax/" class="w-full">🖋️ Syntax</a>
 	</span>
 </nav>
-			<main class="px-5 py-10 content-width min-h-screen svelte-thagi0"><div class="text-justify"><p>TODO</p>
-<p>erpc syntax</p>
+			<main class="px-5 py-10 content-width min-h-screen svelte-thagi0"><div class="text-justify"><h1 id="easy-rpc-syntax"><a aria-hidden="true" tabindex="-1" href="#easy-rpc-syntax"><span class="icon icon-link"></span></a>easy-rpc Syntax</h1>
+<p>easy-rpc uses a custom declaration language to specify the endpoints. In this section this language will be explained.</p>
+<h2 id="endpoints"><a aria-hidden="true" tabindex="-1" href="#endpoints"><span class="icon icon-link"></span></a>Endpoints</h2>
+<p>Endpoints allways consist of at least a role and a name. This is the absolute minumum for a valid endpoint:</p>
+<div class="code w-full flex flex-col rounded-lg my-6 text-white relative svelte-1urfzr0"><span class="flex w-full justify-between border-b-2 px-3 py-2"><span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file mr-2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+				example.erpc</span>
+			<span class="flex relative"><button title="Copy this snippet" class="absolute right-2/4"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy "><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></span></span>
+	<code class="p-3 overflow-scroll"><!-- HTML_TAG_START --><pre class="shiki" style="background-color: #282c34; color: #abb2bf"><div class="language-id">erpc</div><div class='code-container'><code><div class='line'><span style="color: #E5C07B">Backend</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">ping</span><span style="color: #ABB2BF">()</span></div></code></div></pre><!-- HTML_TAG_END --></code>
+</div>
+<p>Endpoints can have parameters and return types. These can be any valid <a href="#Types">easy-rpc type</a>.</p>
+<div class="code w-full flex flex-col rounded-lg my-6 text-white relative svelte-1urfzr0"><span class="flex w-full justify-between border-b-2 px-3 py-2"><span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file mr-2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+				example.erpc</span>
+			<span class="flex relative"><button title="Copy this snippet" class="absolute right-2/4"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy "><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></span></span>
+	<code class="p-3 overflow-scroll"><!-- HTML_TAG_START --><pre class="shiki" style="background-color: #282c34; color: #abb2bf"><div class="language-id">erpc</div><div class='code-container'><code><div class='line'><span style="color: #7F848E">// Endpoint with a parameter</span></div><div class='line'><span style="color: #E5C07B">Backend</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">logToServerConsole</span><span style="color: #ABB2BF">(</span><span style="color: #E5C07B">message</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">string</span><span style="color: #ABB2BF">)</span></div><div class='line'></div><div class='line'><span style="color: #7F848E">// Endpoint with a return type</span></div><div class='line'><span style="color: #E5C07B">Backend</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">getCurrentTime</span><span style="color: #ABB2BF">() </span><span style="color: #C678DD">int32</span></div><div class='line'></div><div class='line'><span style="color: #7F848E">// Endpoint with a signle parameter and return type</span></div><div class='line'><span style="color: #E5C07B">Backend</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">echo</span><span style="color: #ABB2BF">(</span><span style="color: #E5C07B">echoMessage</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">string</span><span style="color: #ABB2BF">) </span><span style="color: #C678DD">string</span></div><div class='line'></div><div class='line'><span style="color: #7F848E">// Endpoint with multiple parameters and a return type</span></div><div class='line'><span style="color: #E5C07B">Backend</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">sendMessageTo</span><span style="color: #ABB2BF">(</span><span style="color: #E5C07B">message</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">string</span><span style="color: #ABB2BF">, </span><span style="color: #E5C07B">userId</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">int</span><span style="color: #ABB2BF">) </span><span style="color: #C678DD">string</span></div></code></div></pre><!-- HTML_TAG_END --></code>
+</div>
+<h2 id="types"><a aria-hidden="true" tabindex="-1" href="#types"><span class="icon icon-link"></span></a>Types</h2>
+<p>There are three kinds of types in easy-rpc.</p>
+<h3 id="primitive-types"><a aria-hidden="true" tabindex="-1" href="#primitive-types"><span class="icon icon-link"></span></a>Primitive types</h3>
+<p>As in many other languages, easy-rpc knows a fixed set of primitive types.</p>
+<table><thead><tr><th>Identifier</th>
+<th>Description</th></tr></thead>
+<tbody><tr><td>boolean</td>
+<td>A value which can be <code>true</code> or <code>false</code></td></tr>
+<tr><td>int</td>
+<td>A whole number (16bit)</td></tr>
+<tr><td>int8</td>
+<td>A whole number (8bit)</td></tr>
+<tr><td>int16</td>
+<td>A whole number (16bit)</td></tr>
+<tr><td>int32</td>
+<td>A whole number (32bit)</td></tr>
+<tr><td>int64</td>
+<td>A whole number (64bit)</td></tr>
+<tr><td>float</td>
+<td>A floating point number (32bit)</td></tr>
+<tr><td>float32</td>
+<td>A floating point number (32bit)</td></tr>
+<tr><td>float64</td>
+<td>A floating point number (64bit)</td></tr>
+<tr><td>string</td>
+<td>A string of characters</td></tr></tbody></table>
+<h3 id="enum-types"><a aria-hidden="true" tabindex="-1" href="#enum-types"><span class="icon icon-link"></span></a>Enum types</h3>
+<p>An enum value is a value which is one of a fixed set. Values are separated by a <code>|</code>.</p>
+<div class="code w-full flex flex-col rounded-lg my-6 text-white relative svelte-1urfzr0"><span class="flex w-full justify-between border-b-2 px-3 py-2"><span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file mr-2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+				example.erpc</span>
+			<span class="flex relative"><button title="Copy this snippet" class="absolute right-2/4"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy "><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></span></span>
+	<code class="p-3 overflow-scroll"><!-- HTML_TAG_START --><pre class="shiki" style="background-color: #282c34; color: #abb2bf"><div class="language-id">erpc</div><div class='code-container'><code><div class='line'><span style="color: #E5C07B">Backend</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">example</span><span style="color: #ABB2BF">(</span><span style="color: #E5C07B">enumParameter</span><span style="color: #ABB2BF"> </span><span style="color: #98C379">"example"</span><span style="color: #ABB2BF"> | </span><span style="color: #D19A66">420</span><span style="color: #ABB2BF"> | </span><span style="color: #D19A66">true</span><span style="color: #ABB2BF">) </span><span style="color: #98C379">"success"</span><span style="color: #ABB2BF"> | </span><span style="color: #98C379">"error"</span></div></code></div></pre><!-- HTML_TAG_END --></code>
+</div>
+<p>Enums can only contain primitive literals. The value must explicitly be stated. <code>string</code> or <code>int</code> are not allowed, <code>&quot;test&quot;</code> or <code>69</code> are.</p>
+<h3 id="custom-types"><a aria-hidden="true" tabindex="-1" href="#custom-types"><span class="icon icon-link"></span></a>Custom types</h3>
+<p>Custom types are user defined types consisting of other user defined types or primitive types.</p>
+<div class="code w-full flex flex-col rounded-lg my-6 text-white relative svelte-1urfzr0"><span class="flex w-full justify-between border-b-2 px-3 py-2"><span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file mr-2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+				example.erpc</span>
+			<span class="flex relative"><button title="Copy this snippet" class="absolute right-2/4"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy "><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></span></span>
+	<code class="p-3 overflow-scroll"><!-- HTML_TAG_START --><pre class="shiki" style="background-color: #282c34; color: #abb2bf"><div class="language-id">erpc</div><div class='code-container'><code><div class='line'><span style="color: #C678DD">type</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">ExampleType</span><span style="color: #ABB2BF"> {</span></div><div class='line'><span style="color: #ABB2BF">    </span><span style="color: #E5C07B">field1</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">string</span></div><div class='line'><span style="color: #ABB2BF">    </span><span style="color: #E5C07B">field2</span><span style="color: #ABB2BF"> </span><span style="color: #98C379">"ex"</span><span style="color: #ABB2BF"> | </span><span style="color: #98C379">"ample"</span></div><div class='line'><span style="color: #ABB2BF">}</span></div><div class='line'></div><div class='line'><span style="color: #C678DD">type</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">AnotherType</span><span style="color: #ABB2BF"> {</span></div><div class='line'><span style="color: #ABB2BF">    </span><span style="color: #E5C07B">field1</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">ExampleType</span></div><div class='line'><span style="color: #ABB2BF">}</span></div></code></div></pre><!-- HTML_TAG_END --></code>
+</div>
+<h3 id="arrays"><a aria-hidden="true" tabindex="-1" href="#arrays"><span class="icon icon-link"></span></a>Arrays</h3>
+<p>Primitive or user defined types can be arrays. Arrays are marked via a <code>[]</code> behind the type. Arrays can have a fixed size.</p>
+<div class="code w-full flex flex-col rounded-lg my-6 text-white relative svelte-1urfzr0"><span class="flex w-full justify-between border-b-2 px-3 py-2"><span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file mr-2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+				example.erpc</span>
+			<span class="flex relative"><button title="Copy this snippet" class="absolute right-2/4"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy "><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></span></span>
+	<code class="p-3 overflow-scroll"><!-- HTML_TAG_START --><pre class="shiki" style="background-color: #282c34; color: #abb2bf"><div class="language-id">erpc</div><div class='code-container'><code><div class='line'><span style="color: #C678DD">type</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">Player</span><span style="color: #ABB2BF"> {</span></div><div class='line'><span style="color: #ABB2BF">    </span><span style="color: #E5C07B">name</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">string</span></div><div class='line'><span style="color: #ABB2BF">    </span><span style="color: #E5C07B">achievements</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">string</span><span style="color: #ABB2BF">[]</span></div><div class='line'><span style="color: #ABB2BF">    </span><span style="color: #E5C07B">levelsCompleted</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">boolean</span><span style="color: #ABB2BF">[</span><span style="color: #D19A66">99</span><span style="color: #ABB2BF">]</span></div><div class='line'><span style="color: #ABB2BF">}</span></div></code></div></pre><!-- HTML_TAG_END --></code>
+</div>
+<h3 id="comments"><a aria-hidden="true" tabindex="-1" href="#comments"><span class="icon icon-link"></span></a>Comments</h3>
+<p>easy-rpc allows for two kinds of comments: Disposeable and documentational. Disposeable comments are ignored while transpiling. Documentational comments are transferred into the generated types and methods.</p>
+<div class="code w-full flex flex-col rounded-lg my-6 text-white relative svelte-1urfzr0"><span class="flex w-full justify-between border-b-2 px-3 py-2"><span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file mr-2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+				example.erpc</span>
+			<span class="flex relative"><button title="Copy this snippet" class="absolute right-2/4"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy "><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></span></span>
+	<code class="p-3 overflow-scroll"><!-- HTML_TAG_START --><pre class="shiki" style="background-color: #282c34; color: #abb2bf"><div class="language-id">erpc</div><div class='code-container'><code><div class='line'><span style="color: #7F848E">/**</span></div><div class='line'><span style="color: #7F848E">    This represents a player of the game</span></div><div class='line'><span style="color: #7F848E">*/</span></div><div class='line'><span style="color: #C678DD">type</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">Player</span><span style="color: #ABB2BF"> {</span></div><div class='line'><span style="color: #ABB2BF">    </span><span style="color: #7F848E">/**</span></div><div class='line'><span style="color: #7F848E">        This comment will be documentational</span></div><div class='line'><span style="color: #7F848E">    */</span></div><div class='line'><span style="color: #ABB2BF">    </span><span style="color: #E5C07B">name</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">string</span></div><div class='line'><span style="color: #ABB2BF">    </span><span style="color: #7F848E">/*</span></div><div class='line'><span style="color: #7F848E">        This one will be ignored</span></div><div class='line'><span style="color: #7F848E">    */</span></div><div class='line'><span style="color: #ABB2BF">    </span><span style="color: #E5C07B">achievements</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">string</span><span style="color: #ABB2BF">[]</span></div><div class='line'><span style="color: #ABB2BF">    </span><span style="color: #7F848E">// I'm going to be ignored</span></div><div class='line'><span style="color: #ABB2BF">    </span><span style="color: #E5C07B">levelsCompleted</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">boolean</span><span style="color: #ABB2BF">[</span><span style="color: #D19A66">99</span><span style="color: #ABB2BF">]</span></div><div class='line'><span style="color: #ABB2BF">    </span><span style="color: #7F848E"># Me too</span></div><div class='line'><span style="color: #ABB2BF">}</span></div><div class='line'></div><div class='line'><span style="color: #7F848E">/**</span></div><div class='line'><span style="color: #7F848E">    This returns the player by their name</span></div><div class='line'><span style="color: #7F848E">*/</span></div><div class='line'><span style="color: #E5C07B">Backend</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">getPlayer</span><span style="color: #ABB2BF">(</span><span style="color: #E5C07B">name</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">string</span><span style="color: #ABB2BF">) </span><span style="color: #E5C07B">Player</span></div><div class='line'></div></code></div></pre><!-- HTML_TAG_END --></code>
+</div>
 <p>configuration structure (json files)</p></div></main>
 			<section class="hidden md:block fixed w-56 right-0 top-12"><ul class="list-none">
 </ul></section></div></div>
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="tavj5q">
-			import { start } from "/easy-rpc-docs/_app/immutable/start-23f9289e.js";
+		<script type="module" data-sveltekit-hydrate="y0wqsn">
+			import { start } from "/easy-rpc-docs/_app/immutable/start-f08a0ba8.js";
 
 			start({
 				env: {},
@@ -79,7 +148,7 @@
 					form: null
 				},
 				paths: {"base":"/easy-rpc-docs","assets":"/easy-rpc-docs"},
-				target: document.querySelector('[data-sveltekit-hydrate="tavj5q"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="y0wqsn"]').parentNode,
 				trailing_slash: "always"
 			});
 		</script>
