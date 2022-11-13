@@ -9,7 +9,7 @@ easy-rpc is a **r**emote **p**rocedure **c**all framework which focuses on ease 
 
 # What does it look like?
 
-A few easy-rpc endpoints might look like this:
+A few easy-rpc endpoints might look like this
 <Code filename="auth.erpc">
 
 ```erpc
@@ -30,7 +30,7 @@ Server register(username string, password string) "success" | "passwordTooShort"
 
 </Code>
 
-They can be called like this:
+They can be called like this
 
 <Code filename="browser.main.ts">
 
@@ -46,7 +46,7 @@ console.log(result);
 
 </Code>
 
-The function for handling incoming requestst on the server can be defined like this:
+The function for handling incoming requestst on the server can be defined like this
 
 <Code filename="server.main.ts">
 

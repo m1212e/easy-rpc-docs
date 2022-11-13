@@ -8,18 +8,18 @@
 		<link href="/easy-rpc-docs/_app/immutable/assets/_layout-ad844061.css" rel="stylesheet">
 		<link href="/easy-rpc-docs/_app/immutable/assets/Code-5df0ceee.css" rel="stylesheet">
 		<link href="/easy-rpc-docs/_app/immutable/assets/_layout-5bab4567.css" rel="stylesheet">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/start-296e1c8a.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/start-60462f12.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/index-7ac94c92.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/singletons-e9c00eeb.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/singletons-e47cbf35.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/preload-helper-b21cceae.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/components/pages/_layout.svelte-03751782.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/components/pages/_layout.svelte-44e0198c.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/DarkMode-f349345e.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/TableOfContent-71c2b9bf.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/stores-34f1559c.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/stores-bde9b5dd.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/index-127ce783.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/modules/pages/_layout.js-0cc788e0.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/_layout-6bdfc1ff.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/components/pages/1💬 What is easy-rpc/1Overview/_page.md-485550d3.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/components/pages/1💬 What is easy-rpc/1Overview/_page.md-718d7639.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/Page-c0f2c207.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/Code-6d2e2b36.js">
 	</head>
@@ -62,7 +62,7 @@
 			<main class="px-5 py-10 content-width min-h-screen svelte-thagi0"><div class="text-justify"><h1 id="what-is-easy-rpc"><a aria-hidden="true" tabindex="-1" href="#what-is-easy-rpc"><span class="icon icon-link"></span></a>What is easy-rpc?</h1>
 <p>easy-rpc is a <strong>r</strong>emote <strong>p</strong>rocedure <strong>c</strong>all framework which focuses on ease of use. It uses a custom declaration language which functions as a single source of truth and enables auto generated clients on both, server and client side. It was designed for usage in web contexts but is not limited to that. It uses HTTP to send and recieve calls.</p>
 <h1 id="what-does-it-look-like"><a aria-hidden="true" tabindex="-1" href="#what-does-it-look-like"><span class="icon icon-link"></span></a>What does it look like?</h1>
-<p>A few easy-rpc endpoints might look like this:</p>
+<p>A few easy-rpc endpoints might look like this</p>
 <div class="code w-full flex flex-col rounded-lg my-6 text-white relative svelte-1urfzr0"><span class="flex w-full justify-between border-b-2 px-3 py-2"><span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file mr-2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
 				auth.erpc</span>
 			<span class="flex relative"><button title="Copy this snippet" class="absolute right-2/4"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy "><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></span></span>
@@ -70,13 +70,13 @@
 <br>
 <!-- HTML_TAG_START --><pre class="shiki" style="background-color: #282c34; color: #abb2bf"><div class="language-id">erpc</div><div class='code-container'><code><div class='line'><span style="color: #7F848E">/**</span></div><div class='line'><span style="color: #7F848E">    This endpoint allows the user to create a new account</span></div><div class='line'><span style="color: #7F848E">*/</span></div><div class='line'><span style="color: #E5C07B">Server</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">register</span><span style="color: #ABB2BF">(</span><span style="color: #E5C07B">username</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">string</span><span style="color: #ABB2BF">, </span><span style="color: #E5C07B">password</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">string</span><span style="color: #ABB2BF">) </span><span style="color: #98C379">"success"</span><span style="color: #ABB2BF"> | </span><span style="color: #98C379">"passwordTooShort"</span><span style="color: #ABB2BF"> | </span><span style="color: #98C379">"emailTaken"</span></div></code></div></pre><!-- HTML_TAG_END --></code>
 </div>
-<p>They can be called like this:</p>
+<p>They can be called like this</p>
 <div class="code w-full flex flex-col rounded-lg my-6 text-white relative svelte-1urfzr0"><span class="flex w-full justify-between border-b-2 px-3 py-2"><span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file mr-2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
 				browser.main.ts</span>
 			<span class="flex relative"><button title="Copy this snippet" class="absolute right-2/4"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy "><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></span></span>
 	<code class="p-3 overflow-scroll"><!-- HTML_TAG_START --><pre class="shiki" style="background-color: #282c34; color: #abb2bf"><div class="language-id">ts</div><div class='code-container'><code><div class='line'><span style="color: #C678DD">const</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">server</span><span style="color: #ABB2BF"> </span><span style="color: #56B6C2">=</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">new</span><span style="color: #ABB2BF"> </span><span style="color: #61AFEF">Server</span><span style="color: #ABB2BF">(</span><span style="color: #7F848E">/* here goes some config */</span><span style="color: #ABB2BF">);</span></div><div class='line'></div><div class='line'><span style="color: #C678DD">const</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">result</span><span style="color: #ABB2BF"> </span><span style="color: #56B6C2">=</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">await</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">server</span><span style="color: #ABB2BF">.</span><span style="color: #E5C07B">auth</span><span style="color: #ABB2BF">.</span><span style="color: #61AFEF">register</span><span style="color: #ABB2BF">(</span><span style="color: #98C379">'my.email.address@example.com'</span><span style="color: #ABB2BF">, </span><span style="color: #98C379">'MyVerySecurePassword'</span><span style="color: #ABB2BF">);</span></div><div class='line'><span style="color: #7F848E">/*</span></div><div class='line'><span style="color: #7F848E">    result is strongly typed as "success" | "passwordTooShort" | "emailTaken"</span></div><div class='line'><span style="color: #7F848E">*/</span></div><div class='line'><span style="color: #E5C07B">console</span><span style="color: #ABB2BF">.</span><span style="color: #61AFEF">log</span><span style="color: #ABB2BF">(</span><span style="color: #E06C75">result</span><span style="color: #ABB2BF">);</span></div></code></div></pre><!-- HTML_TAG_END --></code>
 </div>
-<p>The function for handling incoming requestst on the server can be defined like this:</p>
+<p>The function for handling incoming requestst on the server can be defined like this</p>
 <div class="code w-full flex flex-col rounded-lg my-6 text-white relative svelte-1urfzr0"><span class="flex w-full justify-between border-b-2 px-3 py-2"><span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file mr-2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
 				server.main.ts</span>
 			<span class="flex relative"><button title="Copy this snippet" class="absolute right-2/4"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy "><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button></span></span>
@@ -90,8 +90,8 @@ See <strong><a href="/easy-rpc-docs/2%F0%9F%9B%A0%EF%B8%8F%20Getting%20started/1
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="ozayh2">
-			import { start } from "/easy-rpc-docs/_app/immutable/start-296e1c8a.js";
+		<script type="module" data-sveltekit-hydrate="12tk0ho">
+			import { start } from "/easy-rpc-docs/_app/immutable/start-60462f12.js";
 
 			start({
 				env: {},
@@ -105,7 +105,7 @@ See <strong><a href="/easy-rpc-docs/2%F0%9F%9B%A0%EF%B8%8F%20Getting%20started/1
 					form: null
 				},
 				paths: {"base":"/easy-rpc-docs","assets":"/easy-rpc-docs"},
-				target: document.querySelector('[data-sveltekit-hydrate="ozayh2"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="12tk0ho"]').parentNode,
 				trailing_slash: "always"
 			});
 		</script>
