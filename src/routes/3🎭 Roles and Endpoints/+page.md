@@ -39,7 +39,7 @@ In an easy-rpc setup, each of these entities would have its own role. A `roles.j
 
 On these three roles we can now declare some endpoints. Endpoints always belong to a role and can be called by other roles.
   
-> If you are unsure about where to put the files easy-rpc uses, take a look at the **[setup guide in the getting started section](/easy-rpc-docs/2🛠️%20Getting%20started/1Setup)**. If you need more info on the syntax and allowed configuration parameters, see the **[syntax section](/easy-rpc-docs/4🖋%EF%B8%8F%20Syntax/)**.
+> If you are unsure about where to put the files easy-rpc uses, take a look at the **[setup guide in the getting started section](/easy-rpc-docs/2🛠️%20Getting%20started/1Setup)**. If you need more info on the syntax, see the **[syntax section](/easy-rpc-docs/4🖋%EF%B8%8F%20Syntax/)**.
 
 We create two `.erpc` files to split up the endpoints by their category.
   

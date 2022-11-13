@@ -1,10 +1,15 @@
 <script>
     import Code from '$lib/Code.svelte';
 </script>
+
 # easy-rpc Syntax
+
 easy-rpc uses a custom declaration language to specify the endpoints. In this section this language will be explained.
 
+> If you are looking for available configuration options to configure the `.json` files, see **[the configuration options](/easy-rpc-docs/5⚙️%20Configuration)**..
+
 ## Endpoints
+
 Endpoints allways consist of at least a role and a name. This is the absolute minumum for a valid endpoint:
 
 <Code filename="example.erpc">
@@ -16,7 +21,6 @@ Backend ping()
 </Code>
 
 Endpoints can have parameters and return types. These can be any valid [easy-rpc type](#Types).
-
 
 <Code filename="example.erpc">
 
@@ -37,25 +41,28 @@ Backend sendMessageTo(message string, userId int) string
 </Code>
 
 ## Types
+
 There are three kinds of types in easy-rpc.
 
 ### Primitive types
+
 As in many other languages, easy-rpc knows a fixed set of primitive types.
 
-| Identifier | Description |
-| ----------- | ----------- |
-| boolean | A value which can be `true` or `false` |
-| int   | A whole number (16bit) |
-| int8   | A whole number (8bit) |
-| int16   | A whole number (16bit) |
-| int32   | A whole number (32bit) |
-| int64   | A whole number (64bit) |
-| float   | A floating point number (32bit) |
-| float32   | A floating point number (32bit) |
-| float64   | A floating point number (64bit) |
-| string   | A string of characters |
+| Identifier | Description                            |
+| ---------- | -------------------------------------- |
+| boolean    | A value which can be `true` or `false` |
+| int        | A whole number (16bit)                 |
+| int8       | A whole number (8bit)                  |
+| int16      | A whole number (16bit)                 |
+| int32      | A whole number (32bit)                 |
+| int64      | A whole number (64bit)                 |
+| float      | A floating point number (32bit)        |
+| float32    | A floating point number (32bit)        |
+| float64    | A floating point number (64bit)        |
+| string     | A string of characters                 |
 
 ### Enum types
+
 An enum value is a value which is one of a fixed set. Values are separated by a `|`.
 
 <Code filename="example.erpc">
@@ -69,6 +76,7 @@ Backend example(enumParameter "example" | 420 | true) "success" | "error"
 Enums can only contain primitive literals. The value must explicitly be stated. `string` or `int` are not allowed, `"test"` or `69` are.
 
 ### Custom types
+
 Custom types are user defined types consisting of other user defined types or primitive types.
 
 <Code filename="example.erpc">
@@ -87,6 +95,7 @@ type AnotherType {
 </Code>
 
 ### Arrays
+
 Primitive or user defined types can be arrays. Arrays are marked via a `[]` behind the type. Arrays can have a fixed size.
 
 <Code filename="example.erpc">
@@ -100,6 +109,23 @@ type Player {
 ```
 
 </Code>
+
+### Optionals
+Fields and parameters can be optional. This indicates, that the field or parameter might not be set. To mark a field or parameter as optional, suffix it with a questionmark
+
+<Code filename="example.erpc">
+
+```erpc
+type Player {
+    name string
+    secondName? string
+}
+  
+Backend exampleEndpoint(requiredParameter string, optionalParameter? string)
+```
+
+</Code>
+
 
 ### Comments
 easy-rpc allows for two kinds of comments: Disposeable and documentational. Disposeable comments are ignored while transpiling. Documentational comments are transferred into the generated types and methods.
@@ -132,5 +158,3 @@ Backend getPlayer(name string) Player
 ```
 
 </Code>
-
-configuration structure (json files)
