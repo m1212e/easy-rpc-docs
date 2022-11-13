@@ -7,19 +7,19 @@
 		<meta http-equiv="content-security-policy" content="">
 		<link href="/easy-rpc-docs/_app/immutable/assets/_layout-ad844061.css" rel="stylesheet">
 		<link href="/easy-rpc-docs/_app/immutable/assets/Code-5df0ceee.css" rel="stylesheet">
-		<link href="/easy-rpc-docs/_app/immutable/assets/_layout-5bab4567.css" rel="stylesheet">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/start-60462f12.js">
+		<link href="/easy-rpc-docs/_app/immutable/assets/_layout-f998b25e.css" rel="stylesheet">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/start-d242d1dc.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/index-7ac94c92.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/singletons-e47cbf35.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/singletons-1e0117f4.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/preload-helper-b21cceae.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/components/pages/_layout.svelte-44e0198c.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/components/pages/_layout.svelte-fd2c553a.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/DarkMode-f349345e.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/TableOfContent-71c2b9bf.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/stores-bde9b5dd.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/stores-9a78adac.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/index-127ce783.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/modules/pages/_layout.js-0cc788e0.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/_layout-6bdfc1ff.js">
-		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/components/pages/3🎭 Roles and endpoints/_page.md-cf7aa6fa.js">
+		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/components/pages/3🎭 Roles and endpoints/_page.md-cceabab2.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/Page-c0f2c207.js">
 		<link rel="modulepreload" href="/easy-rpc-docs/_app/immutable/chunks/Code-6d2e2b36.js">
 	</head>
@@ -60,12 +60,12 @@
 	</span>
 </nav>
 			<main class="px-5 py-10 content-width min-h-screen svelte-thagi0"><div class="text-justify"><h1 id="roles-and-endpoints"><a aria-hidden="true" tabindex="-1" href="#roles-and-endpoints"><span class="icon icon-link"></span></a>Roles and endpoints</h1>
-<p>The concept of roles and their endpoints is what easy-rpc resolves around. It tries to look at all components of your app and interconnects them. Every entity of your project has a role. An example for this might be a small chat app. Imagine we need to following parts in out app:</p>
-<h4 id="user-management-server"><a aria-hidden="true" tabindex="-1" href="#user-management-server"><span class="icon icon-link"></span></a>User management server</h4>
+<p>The concept of roles and their endpoints is what easy-rpc resolves around. It tries to look at all components of your app and interconnects them. Every entity of your project has a role. An example for this might be a small chat app. Imagine we need to following parts in our app:</p>
+<p><strong>User management server</strong></p>
 <p>Manages accounts and auth, creates sessions</p>
-<h4 id="message-server"><a aria-hidden="true" tabindex="-1" href="#message-server"><span class="icon icon-link"></span></a>Message server</h4>
+<p><strong>Message server</strong></p>
 <p>Allows users to send and recieve messages</p>
-<h4 id="client"><a aria-hidden="true" tabindex="-1" href="#client"><span class="icon icon-link"></span></a>Client</h4>
+<p><strong>Client</strong></p>
 <p>Uses the app to chat, needs to be notified of new messages</p>
 <p>In an easy-rpc setup, each of these entities would have its own role. A <code>roles.json</code> for this setup could look like this:</p>
 <div class="code w-full flex flex-col rounded-lg my-6 text-white relative svelte-1urfzr0"><span class="flex w-full justify-between border-b-2 px-3 py-2"><span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file mr-2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
@@ -74,7 +74,7 @@
 	<code class="p-3 overflow-scroll"><!-- HTML_TAG_START --><pre class="shiki" style="background-color: #282c34; color: #abb2bf"><div class="language-id">json</div><div class='code-container'><code><div class='line'><span style="color: #ABB2BF">[</span></div><div class='line'><span style="color: #ABB2BF">	{</span></div><div class='line'><span style="color: #ABB2BF">		</span><span style="color: #E06C75">"name"</span><span style="color: #ABB2BF">: </span><span style="color: #98C379">"Client"</span><span style="color: #ABB2BF">,</span></div><div class='line'><span style="color: #ABB2BF">		</span><span style="color: #E06C75">"types"</span><span style="color: #ABB2BF">: [</span><span style="color: #98C379">"browser"</span><span style="color: #ABB2BF">]</span></div><div class='line'><span style="color: #ABB2BF">	},</span></div><div class='line'><span style="color: #ABB2BF">	{</span></div><div class='line'><span style="color: #ABB2BF">		</span><span style="color: #E06C75">"name"</span><span style="color: #ABB2BF">: </span><span style="color: #98C379">"UserManagementServer"</span><span style="color: #ABB2BF">,</span></div><div class='line'><span style="color: #ABB2BF">		</span><span style="color: #E06C75">"types"</span><span style="color: #ABB2BF">: [</span><span style="color: #98C379">"http-server"</span><span style="color: #ABB2BF">]</span></div><div class='line'><span style="color: #ABB2BF">	},</span></div><div class='line'><span style="color: #ABB2BF">	{</span></div><div class='line'><span style="color: #ABB2BF">		</span><span style="color: #E06C75">"name"</span><span style="color: #ABB2BF">: </span><span style="color: #98C379">"MessageServer"</span><span style="color: #ABB2BF">,</span></div><div class='line'><span style="color: #ABB2BF">		</span><span style="color: #E06C75">"types"</span><span style="color: #ABB2BF">: [</span><span style="color: #98C379">"http-server"</span><span style="color: #ABB2BF">]</span></div><div class='line'><span style="color: #ABB2BF">	}</span></div><div class='line'><span style="color: #ABB2BF">]</span></div></code></div></pre><!-- HTML_TAG_END --></code>
 </div>
 <p>On these three roles we can now declare some endpoints. Endpoints always belong to a role and can be called by other roles.</p>
-<blockquote><p>If you are unsure about where to put the files easy-rpc uses, take a look at the <strong><a href="/easy-rpc-docs/2%F0%9F%9B%A0%EF%B8%8F%20Getting%20started/1Setup">setup guide in the getting started section</a></strong>. If you need more info on the syntax, see the <strong><a href="/easy-rpc-docs/4%F0%9F%96%8B%EF%B8%8F%20Syntax/">syntax section</a></strong>.</p></blockquote>
+<blockquote><p>If you are unsure about where to put the files easy-rpc uses, take a look at the <strong><a href="/easy-rpc-docs/2%F0%9F%9B%A0%EF%B8%8F%20Getting%20started/1Setup">setup guide in the getting started section</a></strong>. If you need more info about the available configuration options for the <code>roles.json</code>, see <strong><a href="/easy-rpc-docs/5%E2%9A%99%EF%B8%8F%20Configuration/#rolesjson">syntax section</a></strong>.</p></blockquote>
 <p>We create two <code>.erpc</code> files to split up the endpoints by their category.</p>
 <p>First, the user management:</p>
 <div class="code w-full flex flex-col rounded-lg my-6 text-white relative svelte-1urfzr0"><span class="flex w-full justify-between border-b-2 px-3 py-2"><span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file mr-2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
@@ -94,8 +94,8 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="nd222i">
-			import { start } from "/easy-rpc-docs/_app/immutable/start-60462f12.js";
+		<script type="module" data-sveltekit-hydrate="1shqvta">
+			import { start } from "/easy-rpc-docs/_app/immutable/start-d242d1dc.js";
 
 			start({
 				env: {},
@@ -109,7 +109,7 @@
 					form: null
 				},
 				paths: {"base":"/easy-rpc-docs","assets":"/easy-rpc-docs"},
-				target: document.querySelector('[data-sveltekit-hydrate="nd222i"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="1shqvta"]').parentNode,
 				trailing_slash: "always"
 			});
 		</script>

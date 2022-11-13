@@ -59,3 +59,7 @@ table {
 	margin-top: .5rem;
 	margin-bottom: .5rem;
 }
+
+blockquote {
+	@apply pl-5 my-7 border-l-2 border-gray-900 dark:border-white
+}
