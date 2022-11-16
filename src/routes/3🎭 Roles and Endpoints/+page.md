@@ -26,15 +26,15 @@ In an easy-rpc setup, each of these entities would have its own role. A `roles.j
 [
 	{
 		"name": "Client",
-		"types": ["browser"]
+		"type": "browser"
 	},
 	{
 		"name": "UserManagementServer",
-		"types": ["http-server"]
+		"type": "http-server"
 	},
 	{
 		"name": "MessageServer",
-		"types": ["http-server"]
+		"type": "http-server"
 	}
 ]
 ```

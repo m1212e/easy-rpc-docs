@@ -31,14 +31,24 @@ The `roles.json` lives inside a source directory and specifies which roles are a
 [
 	{
 		"name": "Frontend",
-		"types": ["browser"]
+		"type": "browser",
+		"documentation": "This is a frontend client"
 	},
 	{
 		"name": "Backend",
-		"types": ["http-server"]
+		"type": "http-server"
 	}
 ]
 
 ```
 
 </Code>
+
+Each role has a `name` which it can be referred as and a `type` array which specifies of what kind the role is. Available values for the `type` attribute are
+
+| Value       | Description                            |
+| ----------- | -------------------------------------- |
+| http-server | A server serving http requests         |
+| browser     | A webbrowser                           |
+
+The optional documentation can be used to provide more info on a role and what it does.

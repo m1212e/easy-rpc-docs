@@ -45,11 +45,11 @@ The `roles.json` defines, which roles exist for this source directory. We tell e
 [
 	{
 		"name": "Frontend",
-		"types": ["browser"]
+		"type": "browser"
 	},
 	{
 		"name": "Backend",
-		"types": ["http-server"]
+		"type": "http-server"
 	}
 ]
 ```
