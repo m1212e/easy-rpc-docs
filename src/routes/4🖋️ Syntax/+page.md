@@ -63,17 +63,15 @@ As in many other languages, easy-rpc knows a fixed set of primitive types.
 
 ### Enum types
 
-An enum value is a value which is one of a fixed set. Values are separated by a `|`.
+An enum value is a value which is one of a fixed set. Values are separated by a `|`. Any valid easy-rpc type can be used.
 
 <Code filename="example.erpc">
 
 ```erpc
-Backend example(enumParameter "example" | 420 | true) "success" | "error"
+Backend example(enumParameter "example" | 420 | true | string | MyCustomType) "success" | "error"
 ```
 
 </Code>
-
-Enums can only contain primitive literals. The value must explicitly be stated. `string` or `int` are not allowed, `"test"` or `69` are.
 
 ### Custom types
 

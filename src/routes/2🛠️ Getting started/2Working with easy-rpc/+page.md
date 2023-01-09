@@ -44,7 +44,7 @@ backend.api.ping = async (msg) => {
 };
 
 /*
-  After registering all out handlers, we can start the server. In many cases we need an async wrapper for top-level awaits.
+  After registering all our handlers, we can start the server.
 */
 backend.run();
 ```
@@ -66,7 +66,7 @@ Now we want to call the backend endpoint from the frontend.
 import Backend from '../.erpc/generated/Backend';
 
 /*
-  Now we instantiate the target. In out case it lives on the local machine and listens to the 1234 port, which we configured earlier in the backend code.
+  Now we instantiate the target. In our case it lives on the local machine and listens to the 1234 port, which we configured earlier in the backend code.
 */
 const backend = new Backend({
 	address: 'http://localhost',
@@ -119,7 +119,7 @@ backend.run();
 
 </Code>
 
-On the frontend, we obviously need to implement handlers for the offered endpoints.
+On the frontend, we need to implement handlers for the offered endpoints.
 
 <Code filename="/webapp/frontend/src/main.ts">
 

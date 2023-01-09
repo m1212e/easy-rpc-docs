@@ -104,7 +104,7 @@ This should create a `package.json` and `package-lock.json` file where you can s
   
 To make use of the generated TypeScript code, we need a way to run TypeScript. `ts-node` is a package which allows us to do this without much configuration. But you can use any other tool you want. The [template](#Template) uses `esbuild` to process and run TypeScript.
   
-Install `ts-node` it with
+Install `ts-node` with
 
 <Code>
 
